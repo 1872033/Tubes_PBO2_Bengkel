@@ -196,6 +196,7 @@
       <workItem from="1607400600645" duration="816000" />
       <workItem from="1607837301562" duration="194000" />
       <workItem from="1607840636114" duration="1100000" />
+      <workItem from="1607842840828" duration="672000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -249,13 +250,13 @@
       <screen x="1920" y="0" width="1280" height="984" />
     </state>
     <state x="1920" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607837421034" />
-    <state x="2191" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1607840640335">
+    <state x="2191" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1607842841667">
       <screen x="1920" y="0" width="1280" height="984" />
     </state>
-    <state x="2191" y="274" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607840640335" />
-    <state x="2338" y="389" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607840758805">
+    <state x="2191" y="274" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607842841667" />
+    <state x="2338" y="389" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607842918537">
       <screen x="1920" y="0" width="1280" height="984" />
     </state>
-    <state x="2338" y="389" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607840758805" />
+    <state x="2338" y="389" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607842918537" />
   </component>
 </project>
