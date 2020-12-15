@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../View/LoginPage.fxml"));
         primaryStage.setTitle("Bengkel PBO2");
-        primaryStage.setScene(new Scene(root, 520, 220));
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
 
