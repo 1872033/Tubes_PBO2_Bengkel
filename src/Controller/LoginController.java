@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class LoginController {
+
     @FXML
     private TextField txtUsername;
     @FXML
@@ -19,10 +20,10 @@ public class LoginController {
     private Button btnCancel;
 
     @FXML
-    private void actionLogin(ActionEvent actionEvent) {
+    private void actionCancel(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void actionCancel(ActionEvent actionEvent) {
+    private void actionLogin(ActionEvent actionEvent) {
     }
 }
