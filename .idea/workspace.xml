@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="testing?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LoginPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UserView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,8 +133,7 @@
       <Port>5050</Port>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_144" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_144\jre" />
       <option name="MAIN_CLASS_NAME" value="Bengkel_Anthony_Ray_Ronaldo.Main" />
       <module name="Tubes_PBO2_Bengkel" />
       <RunnerSettings RunnerId="Run" />
@@ -216,7 +215,7 @@
       <workItem from="1607950887597" duration="6000" />
       <workItem from="1607996977396" duration="1061000" />
       <workItem from="1608015953906" duration="227000" />
-      <workItem from="1608018096104" duration="356000" />
+      <workItem from="1608018096104" duration="1239000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -225,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607841445894</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="testing?">
+      <created>1608018465786</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608018465786</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +253,7 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Pembuatan Login Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pembuatan Login Page" />
+    <MESSAGE value="testing?" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing?" />
   </component>
 </project>
