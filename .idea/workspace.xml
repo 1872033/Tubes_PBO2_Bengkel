@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Pembuatan Login Page">
+      <change afterPath="$PROJECT_DIR$/src/Controller/UserViewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/UserView.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LoginPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +61,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +82,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -96,6 +100,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -150,6 +155,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -182,6 +198,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -197,6 +214,13 @@
       <workItem from="1607837301562" duration="194000" />
       <workItem from="1607840636114" duration="1100000" />
       <workItem from="1607842840828" duration="672000" />
+      <workItem from="1607846793394" duration="97000" />
+      <workItem from="1607950401424" duration="35000" />
+      <workItem from="1607950450040" duration="19000" />
+      <workItem from="1607950485374" duration="15000" />
+      <workItem from="1607950648932" duration="91000" />
+      <workItem from="1607950887597" duration="6000" />
+      <workItem from="1607996977396" duration="1061000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -209,54 +233,12 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Pembuatan Login Page" />
     <option name="LAST_COMMIT_MESSAGE" value="Pembuatan Login Page" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="261" y="0" key="#Project_Structure" timestamp="1607400632680">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="261" y="0" key="#Project_Structure/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607400632680" />
-    <state x="2058" y="17" key="CommitChangelistDialog2" timestamp="1607841444574">
-      <screen x="1920" y="0" width="1280" height="984" />
-    </state>
-    <state x="2058" y="17" key="CommitChangelistDialog2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607841444574" />
-    <state x="499" y="110" key="FileChooserDialogImpl" timestamp="1607400696354">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="110" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607400696354" />
-    <state width="1481" height="103" key="GridCell.Tab.0.bottom" timestamp="1607402916730">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1481" height="103" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607402916730" />
-    <state width="1481" height="103" key="GridCell.Tab.0.center" timestamp="1607402916730">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1481" height="103" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607402916730" />
-    <state width="1481" height="103" key="GridCell.Tab.0.left" timestamp="1607402916730">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1481" height="103" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607402916730" />
-    <state width="1481" height="103" key="GridCell.Tab.0.right" timestamp="1607402916730">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1481" height="103" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1280.984@0.0.1536.824" timestamp="1607402916730" />
-    <state x="1920" y="0" key="SettingsEditor" timestamp="1607837421034">
-      <screen x="1920" y="0" width="1280" height="984" />
-    </state>
-    <state x="1920" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607837421034" />
-    <state x="2191" y="274" key="com.intellij.ide.util.TipDialog" timestamp="1607842841667">
-      <screen x="1920" y="0" width="1280" height="984" />
-    </state>
-    <state x="2191" y="274" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607842841667" />
-    <state x="2338" y="389" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607842918537">
-      <screen x="1920" y="0" width="1280" height="984" />
-    </state>
-    <state x="2338" y="389" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1280.984@1920.0.1280.984" timestamp="1607842918537" />
   </component>
 </project>

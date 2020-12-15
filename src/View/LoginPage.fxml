@@ -103,7 +103,8 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#actionCancel" prefHeight="30.0" prefWidth="74.0" text="Cancel">
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#actionCancel"
+                    prefHeight="30.0" prefWidth="74.0" text="Cancel">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
