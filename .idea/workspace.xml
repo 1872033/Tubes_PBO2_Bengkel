@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Pembuatan Login Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Pembuatan UserView Page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tubes_PBO2_Bengkel/Bengkel_Anthony_Ray_Ronaldo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tubes_PBO2_Bengkel/Bengkel_Anthony_Ray_Ronaldo/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LoginPage.fxml" afterDir="false" />
+>>>>>>> 2cb474f113ace5c1f592d4b53dae3d182c955198
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +64,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -100,6 +108,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Mata Kuliah\Sem 5\PBO2B\Tubes\Tubes_PBO2_Bengkel\src\View" />
       <recent name="E:\Mata Kuliah\Sem 5\PBO2B\Tubes\Tubes_PBO2_Bengkel\src" />
     </key>
   </component>
@@ -130,15 +139,10 @@
       <Port>5050</Port>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_144" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Bengkel_Anthony_Ray_Ronaldo.Main" />
       <module name="Tubes_PBO2_Bengkel" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -206,7 +210,11 @@
       <workItem from="1607950648932" duration="91000" />
       <workItem from="1607950887597" duration="6000" />
       <workItem from="1607996977396" duration="1061000" />
+<<<<<<< HEAD
       <workItem from="1608016254255" duration="664000" />
+=======
+      <workItem from="1608015953906" duration="227000" />
+>>>>>>> 2cb474f113ace5c1f592d4b53dae3d182c955198
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -227,6 +235,18 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
