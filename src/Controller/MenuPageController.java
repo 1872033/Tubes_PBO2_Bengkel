@@ -11,7 +11,7 @@ public class MenuPageController {
     @FXML
     private TableColumn ColidReparasi;
     @FXML
-    private TableColumn ColidKendaraan;
+    private TableColumn ColidKendaraanR;
     @FXML
     private TableColumn ColNoPlat;
     @FXML
@@ -23,7 +23,7 @@ public class MenuPageController {
     @FXML
     private TableColumn ColidKendaraanDK;
     @FXML
-    private TableColumn ColJenisKendaraan1;
+    private TableColumn ColJenisKendaraan;
     @FXML
     private TableColumn ColNamaPemilik;
     @FXML
@@ -36,6 +36,10 @@ public class MenuPageController {
     private TableColumn ColUsername;
     @FXML
     private TableColumn ColPasswd;
+    @FXML
+    private TableColumn ColidUserDK;
+
+
 
     @FXML
     private void ActionTambahReparasi(ActionEvent actionEvent) {

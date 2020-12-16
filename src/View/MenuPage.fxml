@@ -12,10 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="542.0" prefWidth="800.0"
-      xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPageController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPageController">
    <children>
       <HBox prefHeight="26.0" prefWidth="800.0">
          <children>
@@ -75,7 +72,7 @@
             <TableView fx:id="TbRiwayatReparasi" prefHeight="200.0" prefWidth="820.0">
                <columns>
                   <TableColumn fx:id="ColidReparasi" prefWidth="84.00003051757812" text="IdReparasi" />
-                  <TableColumn fx:id="ColidKendaraan" prefWidth="84.00003051757812" text="IdKendaraan" />
+                  <TableColumn fx:id="ColidKendaraanR" prefWidth="84.00003051757812" text="IdKendaraan" />
                   <TableColumn fx:id="ColNoPlat" prefWidth="65.5999755859375" text="No Plat" />
                   <TableColumn fx:id="ColTanggal" minWidth="0.0" prefWidth="90.39996337890625" text="Tanggal" />
                   <TableColumn fx:id="ColJenisReparasi" prefWidth="605.6000366210938" text="Jenis Reparasi " />
@@ -114,7 +111,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Label prefHeight="38.0" prefWidth="62.0">
+            <Label prefHeight="38.0" prefWidth="82.0">
                <font>
                   <Font size="18.0" />
                </font>
@@ -148,18 +145,19 @@
       </HBox>
       <HBox prefHeight="200.0" prefWidth="800.0">
          <children>
-            <TableView fx:id="TbDataKendaraan" prefHeight="200.0" prefWidth="473.0">
+            <TableView fx:id="TbDataKendaraan" prefHeight="200.0" prefWidth="519.0">
                <columns>
-                  <TableColumn fx:id="ColidKendaraanDK" prefWidth="99.20001220703125" text="IdKendaraan" />
-                  <TableColumn fx:id="ColJenisKendaraan1" prefWidth="125.5999755859375" text="Jenis Kendaraan" />
-                  <TableColumn fx:id="ColNamaPemilik" prefWidth="106.4000244140625" text="Nama Pemilik" />
-                  <TableColumn fx:id="ColNoSTNK" minWidth="0.0" prefWidth="129.5999755859375" text="STNK" />
+                  <TableColumn fx:id="ColidKendaraanDK" prefWidth="84.80001831054688" text="IdKendaraan" />
+                  <TableColumn fx:id="ColidUserDK" prefWidth="71.19998168945312" text="IdUser" />
+                  <TableColumn fx:id="ColJenisKendaraan" prefWidth="107.20001220703125" text="Jenis Kendaraan" />
+                  <TableColumn fx:id="ColNamaPemilik" prefWidth="100.00006103515625" text="Nama Pemilik" />
+                  <TableColumn fx:id="ColNoSTNK" minWidth="0.0" prefWidth="204.79998779296875" text="STNK" />
                </columns>
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
             </TableView>
-            <Label prefHeight="18.0" prefWidth="59.0" />
+            <Label prefHeight="18.0" prefWidth="23.0" />
             <TableView fx:id="TbDataUser" prefHeight="200.0" prefWidth="233.0">
               <columns>
                 <TableColumn fx:id="ColidUser" prefWidth="75.0" text="ID" />
