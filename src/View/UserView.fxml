@@ -9,13 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity"
-      minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="400.0" prefWidth="600.0"
-      xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Controller.UserViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserViewController">
    <children>
       <Label text="Riwayat Reparasi Kendaraan">
          <VBox.margin>
@@ -30,12 +24,13 @@
       </Label>
       <HBox prefHeight="300.0" prefWidth="600.0">
          <children>
-            <TableView fx:id="TbRiwayatReparasi" prefHeight="294.0" prefWidth="591.0">
+            <TableView fx:id="TbRiwayatReparasi" prefHeight="290.0" prefWidth="684.0">
               <columns>
-                <TableColumn fx:id="ColNoPlat" prefWidth="75.0" text="No Plat" />
-                  <TableColumn fx:id="ColNamaPemilik" prefWidth="90.4000244140625" text="Nama Pemilik" />
-                <TableColumn fx:id="ColTanggal" prefWidth="123.19996643066406" text="Tanggal" />
-                  <TableColumn fx:id="ColJenisReparasi" prefWidth="375.2000732421875" text="Jenis Reparasi" />
+                <TableColumn fx:id="ColNoPlat" prefWidth="62.0" text="No Plat" />
+                  <TableColumn fx:id="ColJenisKendaraan" prefWidth="110.0" text="Jenis Kendaraan" />
+                  <TableColumn fx:id="ColNamaPemilik" prefWidth="97.0" text="Nama Pemilik" />
+                <TableColumn fx:id="ColTanggal" minWidth="0.0" prefWidth="67.0" text="Tanggal" />
+                  <TableColumn fx:id="ColJenisReparasi" prefWidth="405.0" text="Jenis Reparasi " />
               </columns>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

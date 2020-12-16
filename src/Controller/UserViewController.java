@@ -16,6 +16,8 @@ public class UserViewController {
     private TableColumn ColTanggal;
     @FXML
     private TableColumn ColJenisReparasi;
+    @FXML
+    private TableColumn ColJenisKendaraan;
 
     @FXML
     private void actionCetak(ActionEvent actionEvent) {

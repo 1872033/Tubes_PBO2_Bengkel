@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Pembuatan UserView Page">
+      <change afterPath="$PROJECT_DIR$/src/Controller/MenuPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/MenuPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tubes_PBO2_Bengkel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tubes_PBO2_Bengkel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tubes_PBO2_Bengkel/Bengkel_Anthony_Ray_Ronaldo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tubes_PBO2_Bengkel/Bengkel_Anthony_Ray_Ronaldo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utility/MySQLConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utility/MySQLConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/UserView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UserView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +63,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -96,8 +100,8 @@
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.22614841" />
     <property name="recentsLimit" value="5" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -146,6 +150,19 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -206,6 +223,7 @@
       <workItem from="1607950887597" duration="6000" />
       <workItem from="1607996977396" duration="1061000" />
       <workItem from="1608015953906" duration="227000" />
+      <workItem from="1608083415716" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -237,15 +255,5 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Pembuatan Login Page" />
     <option name="LAST_COMMIT_MESSAGE" value="Pembuatan Login Page" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="186" y="8" key="SettingsEditor" timestamp="1608047930507">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="186" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608047930507" />
-    <state x="477" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1608047834004">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="477" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1608047834004" />
   </component>
 </project>
