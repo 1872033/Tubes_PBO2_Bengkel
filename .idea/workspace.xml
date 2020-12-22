@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Pembuatan Menu Utama">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Tambahan Menu Utama">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Tubes_PBO2_Bengkel/Bengkel_Anthony_Ray_Ronaldo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tubes_PBO2_Bengkel/Bengkel_Anthony_Ray_Ronaldo/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MenuPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MenuPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/MenuPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MenuPage.fxml" afterDir="false" />
     </list>
@@ -149,15 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -218,7 +218,10 @@
       <workItem from="1607950887597" duration="6000" />
       <workItem from="1607996977396" duration="1061000" />
       <workItem from="1608015953906" duration="227000" />
-      <workItem from="1608083415716" duration="1781000" />
+      <workItem from="1608083415716" duration="1854000" />
+      <workItem from="1608166591720" duration="16000" />
+      <workItem from="1608558963408" duration="32000" />
+      <workItem from="1608615953703" duration="3710000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -234,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608085202023</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Tambahan Menu Utama">
+      <created>1608086089407</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608086089407</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +267,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="Pembuatan Login Page" />
     <MESSAGE value="Pembuatan Menu Utama" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pembuatan Menu Utama" />
+    <MESSAGE value="Tambahan Menu Utama" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tambahan Menu Utama" />
   </component>
 </project>

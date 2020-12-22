@@ -73,7 +73,7 @@
                <columns>
                   <TableColumn fx:id="ColidReparasi" prefWidth="84.00003051757812" text="IdReparasi" />
                   <TableColumn fx:id="ColidKendaraanR" prefWidth="84.00003051757812" text="IdKendaraan" />
-                  <TableColumn fx:id="ColNoPlat" prefWidth="65.5999755859375" text="No Plat" />
+                  <TableColumn fx:id="ColidNamaPemilikR" prefWidth="95.199951171875" text="NamaPemilik" />
                   <TableColumn fx:id="ColTanggal" minWidth="0.0" prefWidth="90.39996337890625" text="Tanggal" />
                   <TableColumn fx:id="ColJenisReparasi" prefWidth="605.6000366210938" text="Jenis Reparasi " />
                </columns>
@@ -148,9 +148,9 @@
             <TableView fx:id="TbDataKendaraan" prefHeight="200.0" prefWidth="519.0">
                <columns>
                   <TableColumn fx:id="ColidKendaraanDK" prefWidth="84.80001831054688" text="IdKendaraan" />
-                  <TableColumn fx:id="ColidUserDK" prefWidth="71.19998168945312" text="IdUser" />
-                  <TableColumn fx:id="ColJenisKendaraan" prefWidth="107.20001220703125" text="Jenis Kendaraan" />
-                  <TableColumn fx:id="ColNamaPemilik" prefWidth="100.00006103515625" text="Nama Pemilik" />
+                  <TableColumn fx:id="ColJenisKendaraan" prefWidth="88.79998779296875" text="Jenis Kendaraan" />
+                  <TableColumn fx:id="ColNamaPemilikDK" prefWidth="100.00006103515625" text="Nama Pemilik" />
+                  <TableColumn fx:id="ColNoPlat" prefWidth="75.0" text="NoPlat" />
                   <TableColumn fx:id="ColNoSTNK" minWidth="0.0" prefWidth="204.79998779296875" text="STNK" />
                </columns>
                <padding>
@@ -160,7 +160,7 @@
             <Label prefHeight="18.0" prefWidth="23.0" />
             <TableView fx:id="TbDataUser" prefHeight="200.0" prefWidth="233.0">
               <columns>
-                <TableColumn fx:id="ColidUser" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="ColNama" prefWidth="75.0" text="Nama" />
                 <TableColumn fx:id="ColUsername" prefWidth="91.20001220703125" text="Username" />
                   <TableColumn fx:id="ColPasswd" prefWidth="59.199951171875" text="Password" />
               </columns>

@@ -6,6 +6,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
 public class MenuPageController {
+
+
     @FXML
     private TableView TbRiwayatReparasi;
     @FXML
@@ -13,7 +15,7 @@ public class MenuPageController {
     @FXML
     private TableColumn ColidKendaraanR;
     @FXML
-    private TableColumn ColNoPlat;
+    private TableColumn ColidNamaPemilikR;
     @FXML
     private TableColumn ColTanggal;
     @FXML
@@ -25,21 +27,19 @@ public class MenuPageController {
     @FXML
     private TableColumn ColJenisKendaraan;
     @FXML
-    private TableColumn ColNamaPemilik;
+    private TableColumn ColNamaPemilikDK;
+    @FXML
+    private TableColumn ColNoPlat;
     @FXML
     private TableColumn ColNoSTNK;
     @FXML
     private TableView TbDataUser;
     @FXML
-    private TableColumn ColidUser;
+    private TableColumn ColNama;
     @FXML
     private TableColumn ColUsername;
     @FXML
     private TableColumn ColPasswd;
-    @FXML
-    private TableColumn ColidUserDK;
-
-
 
     @FXML
     private void ActionTambahReparasi(ActionEvent actionEvent) {
