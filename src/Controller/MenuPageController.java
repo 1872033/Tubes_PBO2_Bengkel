@@ -76,4 +76,12 @@ public class MenuPageController {
     @FXML
     private void ActionUpdateUser(ActionEvent actionEvent) {
     }
+
+    @FXML
+    private void actionSparePrat(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void actionJasa(ActionEvent actionEvent) {
+    }
 }
