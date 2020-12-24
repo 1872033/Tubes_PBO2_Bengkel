@@ -5,9 +5,9 @@ import java.util.Date;
 public class Reparasi {
     private int idReparasi;
     private Date tglreparasi;
-    private String noplat;
     private String jenisreparasi;
     private Kendaraan idKendaraan;
+    private User idUser;
 
     public int getIdReparasi() {
         return idReparasi;
@@ -25,13 +25,9 @@ public class Reparasi {
         this.tglreparasi = tglreparasi;
     }
 
-    public String getNoplat() {
-        return noplat;
-    }
+    public User getIdUser() { return idUser; }
 
-    public void setNoplat(String noplat) {
-        this.noplat = noplat;
-    }
+    public void setIdUser(User idUser) { this.idUser = idUser; }
 
     public String getJenisreparasi() {
         return jenisreparasi;
@@ -52,9 +48,11 @@ public class Reparasi {
     @Override
     public String toString() {
         return "Reparasi{" +
-                "tglreparasi=" + tglreparasi +
-                ", noplat='" + noplat + '\'' +
+                "idReparasi=" + idReparasi +
+                ", tglreparasi=" + tglreparasi +
                 ", jenisreparasi='" + jenisreparasi + '\'' +
+                ", idKendaraan=" + idKendaraan +
+                ", idUser=" + idUser +
                 '}';
     }
 }

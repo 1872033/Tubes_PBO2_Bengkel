@@ -3,8 +3,8 @@ package Entity;
 public class Kendaraan {
     private int idKendaraan;
     private String jeniskendaraan;
-    private String namapemilik;
     private String nostnk;
+    private  String noPlat;
     private User idUser;
 
     public int getIdKendaraan() {
@@ -23,14 +23,6 @@ public class Kendaraan {
         this.jeniskendaraan = jeniskendaraan;
     }
 
-    public String getNamapemilik() {
-        return namapemilik;
-    }
-
-    public void setNamapemilik(String namapemilik) {
-        this.namapemilik = namapemilik;
-    }
-
     public String getNostnk() {
         return nostnk;
     }
@@ -39,20 +31,22 @@ public class Kendaraan {
         this.nostnk = nostnk;
     }
 
-    public User getIdUser() {
-        return idUser;
-    }
+    public String getNoPlat() { return noPlat; }
 
-    public void setIdUser(User idUser) {
-        this.idUser = idUser;
-    }
+    public void setNoPlat(String noPlat) { this.noPlat = noPlat; }
+
+    public User getIdUser() { return idUser; }
+
+    public void setIdUser(User idUser) { this.idUser = idUser; }
 
     @Override
     public String toString() {
         return "Kendaraan{" +
-                "jeniskendaraan='" + jeniskendaraan + '\'' +
-                ", namapemilik='" + namapemilik + '\'' +
+                "idKendaraan=" + idKendaraan +
+                ", jeniskendaraan='" + jeniskendaraan + '\'' +
                 ", nostnk='" + nostnk + '\'' +
+                ", noPlat='" + noPlat + '\'' +
+                ", idUser=" + idUser +
                 '}';
     }
 }

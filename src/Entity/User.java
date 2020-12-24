@@ -2,8 +2,13 @@ package Entity;
 
 public class User {
     private int idUser;
+    private String nama;
     private String username;
     private String password;
+
+    public String getNama() { return nama; }
+
+    public void setNama(String nama) { this.nama = nama; }
 
     public int getIdUser() {
         return idUser;
