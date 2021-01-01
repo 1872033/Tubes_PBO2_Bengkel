@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahUpdateUserController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahUpdateUserController">
    <children>
       <HBox prefHeight="50.0" prefWidth="600.0">
          <children>
@@ -151,7 +151,7 @@
                </font>
             </Button>
             <Label prefHeight="18.0" prefWidth="20.0" />
-            <Button mnemonicParsing="false" onAction="#actionCancel" prefHeight="42.0" prefWidth="78.0" text="Cancel">
+            <Button mnemonicParsing="false" onAction="#actionCancelUser" prefHeight="42.0" prefWidth="78.0" text="Cancel">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
                </HBox.margin>

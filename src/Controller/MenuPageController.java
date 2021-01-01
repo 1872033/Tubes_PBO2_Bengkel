@@ -78,10 +78,10 @@ public class MenuPageController {
     }
 
     @FXML
-    private void actionSparePrat(ActionEvent actionEvent) {
+    private void ActionLihatDetailReparasi(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void actionJasa(ActionEvent actionEvent) {
+    private void actionSparePartJasa(ActionEvent actionEvent) {
     }
 }

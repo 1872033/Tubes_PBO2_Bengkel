@@ -28,6 +28,6 @@ public class TambahUpdateUserController {
     }
 
     @FXML
-    private void actionCancel(ActionEvent actionEvent) {
+    private void actionCancelUser(ActionEvent actionEvent) {
     }
 }

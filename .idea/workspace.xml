@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Penambahan entitas karena update database">
-      <change afterPath="$PROJECT_DIR$/src/Controller/TambahUpdateUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/View/TambahUpdateUser.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Perubahan pada menuPage dan penambahan tampilan TambahUpdateUser">
+      <change afterPath="$PROJECT_DIR$/src/Controller/SparePartJasaPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TambahUpdateDetailReparasiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TambahUpdateKendaraanController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TambahUpdateReparasiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/TambahUpdateSparePartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/SparePartJasaPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TambahUpdateDetailReparasi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TambahUpdateJasa.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TambahUpdateKendaraan.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TambahUpdateReparasi.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/View/TambahUpdateSparePart.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MenuPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MenuPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TambahUpdateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TambahUpdateUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/MenuPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MenuPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TambahUpdateUser.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TambahUpdateUser.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -223,7 +234,11 @@
       <workItem from="1608558963408" duration="32000" />
       <workItem from="1608615953703" duration="3787000" />
       <workItem from="1608795676371" duration="678000" />
-      <workItem from="1608802514663" duration="1542000" />
+      <workItem from="1608802514663" duration="1659000" />
+      <workItem from="1608804271607" duration="66000" />
+      <workItem from="1609316981591" duration="13000" />
+      <workItem from="1609407409982" duration="30000" />
+      <workItem from="1609500203405" duration="3544000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -260,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608796324803</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Perubahan pada menuPage dan penambahan tampilan TambahUpdateUser">
+      <created>1608804155635</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608804155635</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +308,7 @@
     <MESSAGE value="Tambahan Menu Utama" />
     <MESSAGE value="Perubahan Menu Utama" />
     <MESSAGE value="Penambahan entitas karena update database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Penambahan entitas karena update database" />
+    <MESSAGE value="Perubahan pada menuPage dan penambahan tampilan TambahUpdateUser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Perubahan pada menuPage dan penambahan tampilan TambahUpdateUser" />
   </component>
 </project>
