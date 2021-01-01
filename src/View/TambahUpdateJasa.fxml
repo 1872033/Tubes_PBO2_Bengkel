@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="180.0" prefWidth="300.0"
-      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Controller.TambahUpdateJasaController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="180.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahUpdateJasaController">
     <children>
         <HBox prefHeight="50.0" prefWidth="600.0">
             <children>

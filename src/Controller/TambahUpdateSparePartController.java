@@ -6,26 +6,28 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
 public class TambahUpdateSparePartController {
-    @FXML
-    private TextField txtIdKendaraan;
-    @FXML
-    private TextField txtJenisKendaraan;
-    @FXML
-    private TextField txtNoSTNK;
-    @FXML
-    private TextField txtNoPlat;
-    @FXML
-    private ComboBox CmbBoxUser;
+
 
     @FXML
-    private void actionTambahKendaraan(ActionEvent actionEvent) {
+    private TextField txtIdSparePart;
+    @FXML
+    private TextField txtNamaSparePart;
+    @FXML
+    private TextField txtHargaBeli;
+    @FXML
+    private TextField txtHargaJual;
+    @FXML
+    private TextField txtStok;
+
+    @FXML
+    private void actionTambahSparePart(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void actionUpdateKendaraan(ActionEvent actionEvent) {
+    private void actionUpdateSparePart(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void actionCancelKendaraan(ActionEvent actionEvent) {
+    private void actionCancelSparePart(ActionEvent actionEvent) {
     }
 }
