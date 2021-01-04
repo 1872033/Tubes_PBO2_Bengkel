@@ -5,14 +5,14 @@ public class DetailReparasi {
     private int idSparapart;
     private int IdJasa;
     private int Jumlah;
-    private int HargaUCustomer;
+    private int HargaCustomer;
 
-    public DetailReparasi(int idReparasi,int idSparapart,int idJasa,int jumlah,int hargaUcustomer){
+    public DetailReparasi(int idReparasi,int idSparapart,int idJasa,int jumlah,int hargacustomer){
         this.setIdReparasi(idReparasi);
         this.setIdSparapart(idSparapart);
         this.setIdJasa(idJasa);
         this.setJumlah(jumlah);
-        this.setHargaUCustomer(hargaUcustomer);
+        this.setHargaCustomer(hargacustomer);
 
     }
 
@@ -47,12 +47,12 @@ public class DetailReparasi {
         Jumlah = jumlah;
     }
 
-    public int getHargaUCustomer() {
-        return HargaUCustomer;
+    public int getHargaCustomer() {
+        return HargaCustomer;
     }
 
-    public void setHargaUCustomer(int hargaUCustomer) {
-        HargaUCustomer = hargaUCustomer;
+    public void setHargaCustomer(int hargaUCustomer) {
+        HargaCustomer = hargaUCustomer;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class DetailReparasi {
                 ", idSparapart=" + idSparapart +
                 ", IdJasa=" + IdJasa +
                 ", Jumlah=" + Jumlah +
-                ", HargaUCustomer=" + HargaUCustomer +
+                ", HargaCustomer=" + HargaCustomer +
                 '}';
     }
 }
