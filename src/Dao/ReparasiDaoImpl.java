@@ -39,7 +39,7 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
                 int idKendaraan=rs.getInt("idKendaraan");
                 Kendaraan k1=new Kendaraan(idKendaraan,"","","");
 
-                Reparasi r = new Reparasi(idReparasi,tglreparasi,jenisreparasi,u1,k1);
+                Reparasi r = new Reparasi(idReparasi,tglreparasi,jenisreparasi,k1,u1);
                 reparasis.add(r);
             }
         }
@@ -60,7 +60,7 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
             String query = "INSERT INTO reparasi(tglreparasi,jenisreparasi) VALUES (?, ?)";
             PreparedStatement ps;
             ps=MySQLConnection.createConnection().prepareStatement(query);
-            ps.setDate(1, object.getTglreparasi());
+            ps.setDate(1, (java.sql.Date) object.getTglreparasi());
             ps.setString(2, object.getJenisreparasi());
 
             result=ps.executeUpdate();
@@ -80,9 +80,9 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
         try {
             String query = "UPDATE reparasi SET tglreparasi=? ,jenisreparasi=?  WHERE idReparasi=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
-            ps.setDate(1, object.getTglreparasi());
+            ps.setDate(1, (java.sql.Date) object.getTglreparasi());
             ps.setString(2, object.getJenisreparasi());
-            ps.setInt(4, object.getIdReparasi());
+            ps.setInt(3, object.getIdReparasi());
 
 
         } catch (SQLException throwables) {

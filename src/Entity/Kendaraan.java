@@ -16,6 +16,14 @@ public class Kendaraan {
 
     }
 
+    public Kendaraan(int idKendaraan, String jeniskendaraan, String nostnk, String noPlat) {
+        this.setIdKendaraan(idKendaraan);
+        this.setJeniskendaraan(jeniskendaraan);
+        this.setNostnk(nostnk);
+        this.setNoPlat(noPlat);
+        this.setIdUser(idUser);
+    }
+
     public int getIdKendaraan() {
         return idKendaraan;
     }
