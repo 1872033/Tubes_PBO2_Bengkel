@@ -12,9 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="542.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPageController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPageController">
    <children>
       <HBox prefHeight="26.0" prefWidth="800.0">
          <children>
@@ -65,6 +63,11 @@
             <Button mnemonicParsing="false" onAction="#ActionUpdateReparasi" text="Update">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#actionlogout" prefHeight="25.0" prefWidth="74.0" text="LogOut">
+               <HBox.margin>
+                  <Insets top="10.0" />
                </HBox.margin>
             </Button>
          </children>

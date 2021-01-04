@@ -84,4 +84,7 @@ public class MenuPageController {
     @FXML
     private void actionSparePartJasa(ActionEvent actionEvent) {
     }
+
+    public void actionlogout(ActionEvent actionEvent) {
+    }
 }

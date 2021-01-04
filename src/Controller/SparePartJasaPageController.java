@@ -50,4 +50,7 @@ public class SparePartJasaPageController {
     @FXML
     private void ActionUpdateJasa(ActionEvent actionEvent) {
     }
+
+    public void exitaction(ActionEvent actionEvent) {
+    }
 }

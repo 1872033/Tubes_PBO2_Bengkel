@@ -9,9 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="542.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SparePartJasaPageController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SparePartJasaPageController">
     <children>
         <HBox prefHeight="30.0" prefWidth="800.0">
             <children>
@@ -121,5 +119,10 @@
                 <Insets right="10.0" />
             </opaqueInsets>
         </HBox>
+      <Button mnemonicParsing="false" onAction="#exitaction" prefHeight="25.0" prefWidth="66.0" text="EXIT">
+         <VBox.margin>
+            <Insets left="420.0" />
+         </VBox.margin>
+      </Button>
     </children>
 </VBox>
