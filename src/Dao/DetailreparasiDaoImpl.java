@@ -34,12 +34,10 @@ public class DetailreparasiDaoImpl implements DaoService<DetailReparasi> {
                 int idReparasi= rs.getInt("idReparasi");
 
                 int idSparePart=rs.getInt("idSparePart");
-                SparePart sp1=new SparePart(idSparePart,"","","");
 
                 int idjasa=rs.getInt("idJasa");
-                Jasa j1=new Jasa(idjasa,"","","");
 
-                DetailReparasi dr = new DetailReparasi(idReparasi,jumlah,hargacustomer,j1,sp1);
+                DetailReparasi dr = new DetailReparasi(idReparasi,jumlah,hargacustomer,idSparePart,idjasa);
                 detailreparasis.add(dr);
             }
         }
