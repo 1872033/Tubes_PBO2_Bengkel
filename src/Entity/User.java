@@ -6,6 +6,14 @@ public class User {
     private String username;
     private String password;
 
+    public User(int idUser,String nama,String username,String password){
+        this.setIdUser(idUser);
+        this.setNama(nama);
+        this.setUsername(username);
+        this.setPassword(password);
+
+    }
+
     public String getNama() { return nama; }
 
     public void setNama(String nama) { this.nama = nama; }

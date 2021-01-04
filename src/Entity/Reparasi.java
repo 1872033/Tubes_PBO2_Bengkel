@@ -9,6 +9,15 @@ public class Reparasi {
     private Kendaraan idKendaraan;
     private User idUser;
 
+    public Reparasi(int idReparasi,Date tglreparasi,String jenisreparasi,Kendaraan idKendaraan,User idUser){
+        this.setIdReparasi(idReparasi);
+        this.setTglreparasi(tglreparasi);
+        this.setJenisreparasi(jenisreparasi);
+        this.setIdKendaraan(idKendaraan);
+        this.setIdUser(idUser);
+
+    }
+
     public int getIdReparasi() {
         return idReparasi;
     }

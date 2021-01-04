@@ -7,6 +7,15 @@ public class SparePart {
     private int hargaJual;
     private int stok;
 
+    public SparePart(int idSparepart,String namaSparepart,int hargaBeli,int hargaJual,int stok){
+        this.setIdSparepart(idSparepart);
+        this.setNamaSparepart(namaSparepart);
+        this.setHargaBeli(hargaBeli);
+        this.setHargaJual(hargaJual);
+        this.setStok(stok);
+
+    }
+
     public int getIdSparepart() {
         return idSparepart;
     }

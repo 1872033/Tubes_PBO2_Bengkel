@@ -5,6 +5,13 @@ public class Jasa {
     private String namaJasa;
     private int Tarif;
 
+    public Jasa(int idJasa,String namaJasa,int tarif){
+        this.setIdJasa(idJasa);
+        this.setNamaJasa(namaJasa);
+        this.setTarif(tarif);
+
+    }
+
     public int getIdJasa() {
         return idJasa;
     }

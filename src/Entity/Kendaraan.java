@@ -7,6 +7,15 @@ public class Kendaraan {
     private  String noPlat;
     private User idUser;
 
+    public Kendaraan(int idKendaraan,String jeniskendaraan,String nostnk,String noPlat,User idUser){
+        this.setIdKendaraan(idKendaraan);
+        this.setJeniskendaraan(jeniskendaraan);
+        this.setNostnk(nostnk);
+        this.setNoPlat(noPlat);
+        this.setIdUser(idUser);
+
+    }
+
     public int getIdKendaraan() {
         return idKendaraan;
     }

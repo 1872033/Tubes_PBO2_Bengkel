@@ -4,6 +4,8 @@ import Entity.Kendaraan;
 import Entity.User;
 import Utility.DaoService;
 import Utility.MySQLConnection;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -15,25 +17,30 @@ import java.util.List;
 public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     @Override
     public List<Kendaraan> fetchAll() {
-        List<Kendaraan> kendaraans = new ArrayList<>();
-        try (Connection connection = MySQLConnection.createConnection()) {
-            String query = "SELECT * FROM kendaraan";
-            try (PreparedStatement ps = connection.prepareStatement(query)) {
-                try (ResultSet rs = ps.executeQuery()) {
-                    while (rs.next()) {
-                        Kendaraan kendaraan = new Kendaraan();
-                        kendaraan.setIdKendaraan(rs.getInt("idKendaraan"));
-                        kendaraan.setJeniskendaraan(rs.getString("JenisKendaraan"));
-                        kendaraan.setNostnk(rs.getInt("Nostnk"));
-                        kendaraan.setNoPlat(rs.getInt("Noplat"));
-                        kendaraans.add(kendaraan);
+        ObservableList<Kendaraan> kendaraans = FXCollections.observableArrayList();
+        try  {
+            String query = "SELECT * FROM Kendaraan " +
+                    "FULL OUTER JOIN User ON Kendaraan.User_idUser= User.idUser";
 
-                        User user = new User();
-                        user.setIdUser(rs.getInt("idUser"));
-                        kendaraans.add(user);
-                    }
-                }
+            PreparedStatement ps;
+            ps= MySQLConnection.createConnection().prepareStatement(query);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                int idKendaraan= rs.getInt("idKendaraan");
+                String jenisKendaraan=rs.getString("JenisKendaraan");
+                String NoSTNK=rs.getString("Nostnk");
+                String NoPlat=rs.getString("Noplat");
+                int idUser=rs.getInt("idUser");
+                User u1=new User(idUser,"","","");
+                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,u1);
+                kendaraans.add(k);
             }
+        }
+        catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         System.out.println(kendaraans);
         return kendaraans;
@@ -42,61 +49,66 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     @Override
     public int addData(Kendaraan object)  {
         int result =0;
-        try (Connection connection = MySQLConnection.createConnection()) {
+        try  {
             String query = "INSERT INTO kendaraan(jeniskendaraan,nostnk,noplat) VALUES (?, ?, ?)";
-            try (PreparedStatement ps = connection.prepareStatement(query)) {
-                ps.setString(1, object.getJeniskendaraan());
-                ps.setInt(2, object.getNostnk());
-                ps.setInt(3, object.getNoPlat());
-
-                if (ps.executeUpdate() != 0) {
-                    connection.commit();
-                    result = 1;
-                } else {
-                    connection.rollback();
-                }
-            }
+            PreparedStatement ps;
+            ps=MySQLConnection.createConnection().prepareStatement(query);
+            ps.setString(1, object.getJeniskendaraan());
+            ps.setString(2, object.getNostnk());
+            ps.setString(3, object.getNoPlat());
+            result=ps.executeUpdate();
+        }
+        catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         return result;
     }
 
     @Override
-    public int editData(Kendaraan object)  {
+    public int editData(Kendaraan object) {
         int result = 0;
-        try (Connection connection = MySQLConnection.createConnection()) {
+        try {
             String query = "UPDATE kendaraan SET jeniskendaraan=? ,nostnk=? ,noplat=? WHERE idKendaraan=?";
-            try (PreparedStatement ps = connection.prepareStatement(query)) {
-                ps.setString(1, object.getJeniskendaraan());
-                ps.setInt(2, object.getNostnk());
-                ps.setInt(3, object.getNoPlat());
-                ps.setInt(4, object.getIdKendaraan());
-                if (ps.executeUpdate() != 0) {
-                    connection.commit();
-                    result = 1;
-                } else {
-                    connection.rollback();
-                }
-            }
+            PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
+            ps.setString(1, object.getJeniskendaraan());
+            ps.setString(2, object.getNostnk());
+            ps.setString(3, object.getNoPlat());
+            ps.setInt(4, object.getIdKendaraan());
+
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
         return result;
     }
 
-    @Override
+
+        @Override
     public int deleteData(Kendaraan object)  {
         int result = 0;
-        try (Connection connection = MySQLConnection.createConnection()) {
-            connection.setAutoCommit(false);
+        try  {
             String query = "DELETE FROM kendaraan WHERE idKendaraan=?";
-            try (PreparedStatement ps = connection.prepareStatement(query)) {
-                ps.setInt(4, object.getIdKendaraan());
+            Connection connection=MySQLConnection.createConnection();
+            connection.setAutoCommit(false);
+            PreparedStatement ps = connection.prepareStatement(query);
+                ps.setInt(1, object.getIdKendaraan());
                 if (ps.executeUpdate() != 0) {
                     connection.commit();
                     result = 1;
                 } else {
                     connection.rollback();
                 }
-            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
-        return result;
+            return result;
     }
 }

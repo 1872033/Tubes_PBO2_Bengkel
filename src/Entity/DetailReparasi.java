@@ -7,6 +7,15 @@ public class DetailReparasi {
     private int Jumlah;
     private int HargaUCustomer;
 
+    public DetailReparasi(int idReparasi,int idSparapart,int idJasa,int jumlah,int hargaUcustomer){
+        this.setIdReparasi(idReparasi);
+        this.setIdSparapart(idSparapart);
+        this.setIdJasa(idJasa);
+        this.setJumlah(jumlah);
+        this.setHargaUCustomer(hargaUcustomer);
+
+    }
+
     public int getIdReparasi() { return idReparasi;
     }
 
