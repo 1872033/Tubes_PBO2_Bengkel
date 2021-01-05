@@ -1,5 +1,6 @@
 package Controller;
 
+import Dao.ReparasiDaoImpl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -47,6 +48,8 @@ public class MenuPageController {
 
     @FXML
     private void ActionHapusReparasi(ActionEvent actionEvent) {
+        parasiDaoImpl.deleteData(Reparasi.getSelectionModel().getSelectedItem());
+
     }
 
     @FXML
