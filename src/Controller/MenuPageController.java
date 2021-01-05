@@ -48,7 +48,6 @@ public class MenuPageController {
 
     @FXML
     private void ActionHapusReparasi(ActionEvent actionEvent) {
-        parasiDaoImpl.deleteData(Reparasi.getSelectionModel().getSelectedItem());
 
     }
 
@@ -84,10 +83,10 @@ public class MenuPageController {
     private void ActionLihatDetailReparasi(ActionEvent actionEvent) {
     }
 
-    @FXML
-    private void actionSparePartJasa(ActionEvent actionEvent) {
+    public void actionlogout(ActionEvent actionEvent) {
     }
 
-    public void actionlogout(ActionEvent actionEvent) {
+    @FXML
+    private void actionSparePart(ActionEvent actionEvent) {
     }
 }

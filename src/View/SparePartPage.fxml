@@ -9,7 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SparePartJasaPageController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="289.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/11.0.1"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SparePartPageController">
     <children>
         <HBox prefHeight="30.0" prefWidth="800.0">
             <children>
@@ -59,65 +61,6 @@
                </HBox.margin>
                 </TableView>
             </children>
-        </HBox>
-        <HBox prefHeight="30.0" prefWidth="200.0">
-            <children>
-                <Label prefHeight="38.0" prefWidth="270.0" text="                         Jasa">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </HBox.margin>
-                </Label>
-                <Button mnemonicParsing="false" onAction="#ActionTambahJasa" text="+">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
-                    </HBox.margin>
-                </Button>
-                <Button mnemonicParsing="false" onAction="#ActionHapusJasa" prefHeight="26.0" prefWidth="26.0" text="-">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
-                    </HBox.margin>
-                </Button>
-                <Button mnemonicParsing="false" onAction="#ActionUpdateJasa" text="Update">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
-                    </HBox.margin>
-                </Button>
-                <Label prefHeight="38.0" prefWidth="82.0">
-                    <font>
-                        <Font size="18.0" />
-                    </font>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                </Label>
-            </children>
-        </HBox>
-        <HBox prefHeight="200.0" prefWidth="800.0">
-            <children>
-                <TableView fx:id="TbJasa" prefHeight="190.0" prefWidth="283.0">
-                    <columns>
-                        <TableColumn fx:id="ColidJasa" prefWidth="84.80001831054688" text="Id Jasa" />
-                        <TableColumn fx:id="ColNamaJasa" prefWidth="88.79998779296875" text="Nama Jasa" />
-                        <TableColumn fx:id="ColTarif" prefWidth="100.00006103515625" text="Tarif" />
-                    </columns>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="130.0" right="5.0" top="5.0" />
-               </HBox.margin>
-                </TableView>
-                <Label prefHeight="18.0" prefWidth="23.0" />
-            </children>
-            <opaqueInsets>
-                <Insets right="10.0" />
-            </opaqueInsets>
         </HBox>
       <Button mnemonicParsing="false" onAction="#exitaction" prefHeight="25.0" prefWidth="66.0" text="EXIT">
          <VBox.margin>

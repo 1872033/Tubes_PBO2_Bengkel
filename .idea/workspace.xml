@@ -4,6 +4,19 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Penambahan Tampilan(Sekarang Tampilan Sudah Lengkap)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MenuPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MenuPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SparePartJasaPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SparePartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TambahUpdateDetailReparasiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TambahUpdateJasaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/DetailreparasiDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/JasaDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/SparepartDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/SparepartDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/DetailReparasi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Jasa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MenuPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MenuPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/SparePartJasaPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SparePartPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TambahUpdateDetailReparasi.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/TambahUpdateJasa.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +109,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Pertemuan 14/TugasInternationalization" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.22614841" />
@@ -148,6 +161,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -222,6 +246,7 @@
       <workItem from="1609702694289" duration="69000" />
       <workItem from="1609765731013" duration="1392000" />
       <workItem from="1609817943558" duration="2961000" />
+      <workItem from="1609830631241" duration="832000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>

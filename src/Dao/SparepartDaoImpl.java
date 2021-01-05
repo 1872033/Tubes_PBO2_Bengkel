@@ -1,6 +1,5 @@
 package Dao;
 
-import Entity.Jasa;
 import Entity.SparePart;
 import Utility.DaoService;
 import Utility.MySQLConnection;
@@ -11,7 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class SparepartDaoImpl implements DaoService<SparePart> {

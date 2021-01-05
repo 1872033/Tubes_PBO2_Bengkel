@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class SparePartJasaPageController {
+public class SparePartPageController {
     @FXML
     private TableView TbSparePart;
     @FXML
