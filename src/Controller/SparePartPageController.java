@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -41,18 +42,15 @@ public class SparePartPageController implements Initializable {
     private Button btnExit;
 
     @FXML
-    private void ActionTambahSparePart(ActionEvent actionEvent) {
-        FXMLLoader Login=new FXMLLoader();
-        Login.setLocation(Main.class.getResource("../View/TambahSparePart.fxml"));
-        Stage dialogStage = new Stage();
-        VBox s = null;
-        try {
-            s = Login.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        dialogStage.setScene(new Scene(s));
-        dialogStage.show();
+    private void ActionTambahSparePart(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("../View/TambahSparePart.fxml"));
+        Parent root = loader.load();
+
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Tambah SparePart");
+        StagetoAdd.show();
     }
 
     @FXML

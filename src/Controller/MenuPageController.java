@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -100,18 +101,15 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void ActionTambahReparasi(ActionEvent actionEvent) {
-        FXMLLoader Login=new FXMLLoader();
-        Login.setLocation(Main.class.getResource("../View/TambahReparasi.fxml"));
-        Stage dialogStage = new Stage();
-        VBox s = null;
-        try {
-            s = Login.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        dialogStage.setScene(new Scene(s));
-        dialogStage.show();
+    private void ActionTambahReparasi(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("../View/TambahReparasi.fxml"));
+        Parent root = loader.load();
+
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Tambah Reparasi");
+        StagetoAdd.show();
 
     }
 
@@ -125,18 +123,15 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void ActionTambahKendaraan(ActionEvent actionEvent) {
-        FXMLLoader Login=new FXMLLoader();
-        Login.setLocation(Main.class.getResource("../View/TambahKendaraan.fxml"));
-        Stage dialogStage = new Stage();
-        VBox s = null;
-        try {
-            s = Login.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        dialogStage.setScene(new Scene(s));
-        dialogStage.show();
+    private void ActionTambahKendaraan(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("../View/TambahKendaraan.fxml"));
+        Parent root = loader.load();
+
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Tambah Kendaraan");
+        StagetoAdd.show();
     }
 
     @FXML
@@ -148,18 +143,15 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void ActionTambahUser(ActionEvent actionEvent) {
-        FXMLLoader Login=new FXMLLoader();
-        Login.setLocation(Main.class.getResource("../View/TambahUser.fxml"));
-        Stage dialogStage = new Stage();
-        VBox s = null;
-        try {
-            s = Login.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        dialogStage.setScene(new Scene(s));
-        dialogStage.show();
+    private void ActionTambahUser(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("../View/TambahUser.fxml"));
+        Parent root = loader.load();
+
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Tambah User");
+        StagetoAdd.show();
     }
 
     @FXML
@@ -185,18 +177,15 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void actionSparePart(ActionEvent actionEvent) {
-        FXMLLoader Login=new FXMLLoader();
-        Login.setLocation(Main.class.getResource("../View/SparePartPage.fxml"));
-        Stage dialogStage = new Stage();
-        VBox s = null;
-        try {
-            s = Login.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        dialogStage.setScene(new Scene(s));
-        dialogStage.show();
+    private void actionSparePart(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("../View/SparePartPage.fxml"));
+        Parent root = loader.load();
+
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle(" SparePart ");
+        StagetoAdd.show();
 
     }
 
