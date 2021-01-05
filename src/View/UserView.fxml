@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserViewController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserViewController">
    <children>
       <Label text="Riwayat Reparasi Kendaraan">
          <VBox.margin>
@@ -22,15 +22,15 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <HBox prefHeight="300.0" prefWidth="600.0">
+      <HBox prefHeight="300.0" prefWidth="800.0">
          <children>
-            <TableView fx:id="TbRiwayatReparasi" prefHeight="290.0" prefWidth="684.0">
+            <TableView fx:id="TbRiwayatReparasi" prefHeight="290.0" prefWidth="799.0">
               <columns>
-                <TableColumn fx:id="ColNoPlat" prefWidth="62.0" text="No Plat" />
-                  <TableColumn fx:id="ColJenisKendaraan" prefWidth="110.0" text="Jenis Kendaraan" />
-                  <TableColumn fx:id="ColNamaPemilik" prefWidth="97.0" text="Nama Pemilik" />
-                <TableColumn fx:id="ColTanggal" minWidth="0.0" prefWidth="67.0" text="Tanggal" />
-                  <TableColumn fx:id="ColJenisReparasi" prefWidth="405.0" text="Jenis Reparasi " />
+                <TableColumn fx:id="ColNoPlat" text="No Plat" />
+                  <TableColumn fx:id="ColJenisKendaraan" prefWidth="140.0" text="Jenis Kendaraan" />
+                  <TableColumn fx:id="ColNamaPemilik" prefWidth="110.0" text="Nama Pemilik" />
+                <TableColumn fx:id="ColTanggal" minWidth="0.0" prefWidth="120.0" text="Tanggal" />
+                  <TableColumn fx:id="ColJenisReparasi" prefWidth="330.0" text="Jenis Reparasi " />
               </columns>
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -55,7 +55,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#ActionExit" prefHeight="30.0" prefWidth="161.0" text="Exit">
+            <Button fx:id="exitbutton" mnemonicParsing="false" onAction="#ActionExit" prefHeight="30.0" prefWidth="161.0" text="Exit">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </HBox.margin>

@@ -1,34 +1,58 @@
 package Controller;
 
+import Bengkel_Anthony_Ray_Ronaldo.Main;
+import Dao.SparepartDaoImpl;
+import Entity.SparePart;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-public class SparePartPageController {
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class SparePartPageController implements Initializable {
     @FXML
-    private TableView TbSparePart;
+    private TableView<SparePart> TbSparePart;
     @FXML
-    private TableColumn ColidSparePart;
+    private TableColumn<SparePart,Integer> ColidSparePart;
     @FXML
-    private TableColumn ColNamaSparePart;
+    private TableColumn<SparePart,String> ColNamaSparePart;
     @FXML
-    private TableColumn ColHargaBeli;
+    private TableColumn<SparePart,Integer> ColHargaBeli;
     @FXML
-    private TableColumn ColHargaJual;
+    private TableColumn<SparePart,Integer> ColHargaJual;
     @FXML
-    private TableColumn ColStok;
+    private TableColumn<SparePart,Integer> ColStok;
     @FXML
-    private TableView TbJasa;
+    private TableColumn<SparePart,Integer> ColIdRep;
+    private Stage StagetoAdd;
     @FXML
-    private TableColumn ColidJasa;
-    @FXML
-    private TableColumn ColNamaJasa;
-    @FXML
-    private TableColumn ColTarif;
+    private Button btnExit;
 
     @FXML
     private void ActionTambahSparePart(ActionEvent actionEvent) {
+        FXMLLoader Login=new FXMLLoader();
+        Login.setLocation(Main.class.getResource("../View/TambahSparePart.fxml"));
+        Stage dialogStage = new Stage();
+        VBox s = null;
+        try {
+            s = Login.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dialogStage.setScene(new Scene(s));
+        dialogStage.show();
     }
 
     @FXML
@@ -39,18 +63,33 @@ public class SparePartPageController {
     private void ActionUpdateSparePart(ActionEvent actionEvent) {
     }
 
-    @FXML
-    private void ActionTambahJasa(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    private void ActionHapusJasa(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    private void ActionUpdateJasa(ActionEvent actionEvent) {
-    }
-
     public void exitaction(ActionEvent actionEvent) {
+        Stage stage = (Stage) btnExit.getScene().getWindow();
+        stage.close();
+        FXMLLoader Login=new FXMLLoader();
+        Login.setLocation(Main.class.getResource("../View/MenuPage.fxml"));
+        Stage dialogStage = new Stage();
+        VBox s = null;
+        try {
+            s = Login.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dialogStage.setScene(new Scene(s));
+        dialogStage.show();
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        StagetoAdd = new Stage();
+        SparepartDaoImpl uDAO = new SparepartDaoImpl();
+        ObservableList<SparePart> dList = (ObservableList<SparePart>) uDAO.fetchAll();
+        TbSparePart.setItems(dList);
+        ColidSparePart.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdSparepart()));
+        ColNamaSparePart.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getNamaSparepart()));
+        ColHargaBeli.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getHargaBeli()));
+        ColHargaJual.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getHargaJual()));
+        ColStok.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getStok()));
+        ColIdRep.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdRep()));
     }
 }

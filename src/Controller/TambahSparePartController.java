@@ -2,12 +2,11 @@ package Controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class TambahUpdateSparePartController {
-
-
+public class TambahSparePartController {
     @FXML
     private TextField txtIdSparePart;
     @FXML
@@ -18,16 +17,16 @@ public class TambahUpdateSparePartController {
     private TextField txtHargaJual;
     @FXML
     private TextField txtStok;
-
     @FXML
-    private void actionTambahSparePart(ActionEvent actionEvent) {
-    }
-
-    @FXML
-    private void actionUpdateSparePart(ActionEvent actionEvent) {
-    }
+    private Button btnCancel;
 
     @FXML
     private void actionCancelSparePart(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void actionTambahSparePart(ActionEvent actionEvent) {
+        Stage stage1 = (Stage) btnCancel.getScene().getWindow();
+        stage1.close();
     }
 }

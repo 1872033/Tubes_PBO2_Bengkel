@@ -1,7 +1,6 @@
 package Dao;
 
 import Entity.Kendaraan;
-import Entity.User;
 import Utility.DaoService;
 import Utility.MySQLConnection;
 import javafx.collections.FXCollections;
@@ -11,7 +10,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class KendaraanDaoImpl implements DaoService<Kendaraan> {

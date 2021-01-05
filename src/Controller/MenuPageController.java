@@ -7,7 +7,6 @@ import Dao.UserDaoImpl;
 import Entity.Kendaraan;
 import Entity.Reparasi;
 import Entity.User;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
@@ -98,15 +97,22 @@ public class MenuPageController implements Initializable {
         ColNoPlat.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNoPlat()));
         ColNoSTNK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNostnk()));
 
-
-
-
-
-
     }
 
     @FXML
     private void ActionTambahReparasi(ActionEvent actionEvent) {
+        FXMLLoader Login=new FXMLLoader();
+        Login.setLocation(Main.class.getResource("../View/TambahReparasi.fxml"));
+        Stage dialogStage = new Stage();
+        VBox s = null;
+        try {
+            s = Login.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dialogStage.setScene(new Scene(s));
+        dialogStage.show();
+
     }
 
     @FXML
@@ -120,6 +126,17 @@ public class MenuPageController implements Initializable {
 
     @FXML
     private void ActionTambahKendaraan(ActionEvent actionEvent) {
+        FXMLLoader Login=new FXMLLoader();
+        Login.setLocation(Main.class.getResource("../View/TambahKendaraan.fxml"));
+        Stage dialogStage = new Stage();
+        VBox s = null;
+        try {
+            s = Login.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dialogStage.setScene(new Scene(s));
+        dialogStage.show();
     }
 
     @FXML
@@ -132,6 +149,17 @@ public class MenuPageController implements Initializable {
 
     @FXML
     private void ActionTambahUser(ActionEvent actionEvent) {
+        FXMLLoader Login=new FXMLLoader();
+        Login.setLocation(Main.class.getResource("../View/TambahUser.fxml"));
+        Stage dialogStage = new Stage();
+        VBox s = null;
+        try {
+            s = Login.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dialogStage.setScene(new Scene(s));
+        dialogStage.show();
     }
 
     @FXML
@@ -142,9 +170,6 @@ public class MenuPageController implements Initializable {
     private void ActionUpdateUser(ActionEvent actionEvent) {
     }
 
-    @FXML
-    private void ActionLihatDetailReparasi(ActionEvent actionEvent) {
-    }
 
     public void actionlogout(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) LogOutButton.getScene().getWindow();
@@ -155,10 +180,24 @@ public class MenuPageController implements Initializable {
         VBox l =Login.load();
         dialogStage.setScene(new Scene(l));
         dialogStage.show();
+        Stage stage1 = (Stage) LogOutButton.getScene().getWindow();
+        stage1.close();
     }
 
     @FXML
     private void actionSparePart(ActionEvent actionEvent) {
+        FXMLLoader Login=new FXMLLoader();
+        Login.setLocation(Main.class.getResource("../View/SparePartPage.fxml"));
+        Stage dialogStage = new Stage();
+        VBox s = null;
+        try {
+            s = Login.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        dialogStage.setScene(new Scene(s));
+        dialogStage.show();
+
     }
 
 

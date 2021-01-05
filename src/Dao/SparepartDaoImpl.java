@@ -29,7 +29,8 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
                 int hargabeli= rs.getInt("HargaBeli");
                 int hargajual= rs.getInt("HargaJual");
                 int stok= rs.getInt("Stok");
-                SparePart sp = new SparePart(idSparepart,nama,hargabeli,hargajual,stok);
+                int idRep= rs.getInt("Reparasi_idReparasi");
+                SparePart sp = new SparePart(idSparepart,nama,hargabeli,hargajual,stok,idRep);
                 spareParts.add(sp);
             }
         }

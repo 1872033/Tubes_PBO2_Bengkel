@@ -14,6 +14,10 @@ public class User {
 
     }
 
+    public User() {
+
+    }
+
     public String getNama() { return nama; }
 
     public void setNama(String nama) { this.nama = nama; }

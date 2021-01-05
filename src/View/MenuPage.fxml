@@ -25,7 +25,7 @@
                 </Menu>
                 <Menu mnemonicParsing="false" onAction="#actionSparePart" text="Spare Part ">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" text="SparePart" />
                   </items>
                 </Menu>
               </menus>
@@ -34,7 +34,7 @@
       </HBox>
       <HBox prefHeight="30.0" prefWidth="800.0">
          <children>
-            <Label prefHeight="38.0" prefWidth="508.0" text="Riwayat Reparasi Kendaraan">
+            <Label prefHeight="38.0" prefWidth="630.0" text="Riwayat Reparasi Kendaraan">
                <font>
                   <Font size="18.0" />
                </font>
@@ -45,11 +45,6 @@
                   <Insets bottom="5.0" left="5.0" top="5.0" />
                </HBox.margin>
             </Label>
-            <Button mnemonicParsing="false" onAction="#ActionLihatDetailReparasi" prefHeight="26.0" prefWidth="111.0" text="Lihat Detail">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
-               </HBox.margin>
-            </Button>
             <Button mnemonicParsing="false" onAction="#ActionTambahReparasi" text="+">
                <HBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />

@@ -2,20 +2,18 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
-      minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0"
-      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="Controller.TambahUpdateSparePartController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahKendaraanController">
     <children>
         <HBox prefHeight="50.0" prefWidth="600.0">
             <children>
-                <Label prefHeight="27.0" prefWidth="120.0" text="ID SparePart">
+                <Label prefHeight="27.0" prefWidth="120.0" text="ID Kendaraan">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -26,7 +24,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="txtIdSparePart">
+                <TextField fx:id="txtIdKendaraan">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -38,7 +36,7 @@
         </HBox>
         <HBox prefHeight="50.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="27.0" prefWidth="120.0" text="Nama">
+                <Label prefHeight="27.0" prefWidth="120.0" text="Jenis Kendaraan">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -49,7 +47,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="txtNamaSparePart">
+                <TextField fx:id="txtJenisKendaraan">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -61,7 +59,7 @@
         </HBox>
         <HBox prefHeight="50.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="27.0" prefWidth="120.0" text="Harga Beli">
+                <Label prefHeight="27.0" prefWidth="120.0" text="No STNK">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -72,7 +70,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="txtHargaBeli">
+                <TextField fx:id="txtNoSTNK">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -84,7 +82,7 @@
         </HBox>
         <HBox prefHeight="50.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="27.0" prefWidth="120.0" text="Harga Jual">
+                <Label prefHeight="27.0" prefWidth="120.0" text="No Plat">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
@@ -95,7 +93,7 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="txtHargaJual">
+                <TextField fx:id="txtNoPlat">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -107,7 +105,7 @@
         </HBox>
         <HBox prefHeight="100.0" prefWidth="200.0">
             <children>
-                <Label prefHeight="27.0" prefWidth="120.0" text="Stok">
+                <Label prefHeight="27.0" prefWidth="120.0" text="User">
                     <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                     </padding>
@@ -118,19 +116,20 @@
                         <Font size="14.0" />
                     </font>
                 </Label>
-            <TextField fx:id="txtStok">
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </TextField>
+                <ComboBox fx:id="CmbBoxUser" prefWidth="150.0">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </ComboBox>
             </children>
         </HBox>
         <HBox prefHeight="149.0" prefWidth="300.0">
             <children>
-                <Button mnemonicParsing="false" onAction="#actionTambahSparePart" prefHeight="42.0" prefWidth="78.0" text="Tambah">
+                <Label prefHeight="18.0" prefWidth="33.0" />
+                <Button mnemonicParsing="false" onAction="#actionTambahKendaraan" prefHeight="42.0" prefWidth="78.0" text="Tambah">
                     <HBox.margin>
                         <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                     </HBox.margin>
@@ -142,19 +141,7 @@
                     </font>
                 </Button>
                 <Label prefHeight="18.0" prefWidth="20.0" />
-                <Button mnemonicParsing="false" onAction="#actionUpdateSparePart" prefHeight="42.0" prefWidth="78.0" text="Update">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                    <font>
-                        <Font size="16.0" />
-                    </font>
-                </Button>
-                <Label prefHeight="18.0" prefWidth="20.0" />
-                <Button mnemonicParsing="false" onAction="#actionCancelSparePart" prefHeight="42.0" prefWidth="78.0" text="Cancel">
+                <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#actionCancelKendaraan" prefHeight="42.0" prefWidth="78.0" text="Cancel">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
                     </HBox.margin>
