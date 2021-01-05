@@ -5,24 +5,25 @@ public class Kendaraan {
     private String jeniskendaraan;
     private String nostnk;
     private  String noPlat;
-    private User idUser;
+    private String NamaUser;
 
-    public Kendaraan(int idKendaraan,String jeniskendaraan,String nostnk,String noPlat,User idUser){
+    public Kendaraan(int idKendaraan,String jeniskendaraan,String nostnk,String noPlat,String NamaUser){
         this.setIdKendaraan(idKendaraan);
         this.setJeniskendaraan(jeniskendaraan);
         this.setNostnk(nostnk);
         this.setNoPlat(noPlat);
-        this.setIdUser(idUser);
+        this.setNamaUser(NamaUser);
 
     }
 
-    public Kendaraan(int idKendaraan, String jeniskendaraan, String nostnk, String noPlat) {
-        this.setIdKendaraan(idKendaraan);
-        this.setJeniskendaraan(jeniskendaraan);
-        this.setNostnk(nostnk);
-        this.setNoPlat(noPlat);
-        this.setIdUser(idUser);
+    public String getNamaUser() {
+        return NamaUser;
     }
+
+    private void setNamaUser(String namaUser) {
+        this.NamaUser=namaUser;
+    }
+
 
     public int getIdKendaraan() {
         return idKendaraan;
@@ -52,10 +53,6 @@ public class Kendaraan {
 
     public void setNoPlat(String noPlat) { this.noPlat = noPlat; }
 
-    public User getIdUser() { return idUser; }
-
-    public void setIdUser(User idUser) { this.idUser = idUser; }
-
     @Override
     public String toString() {
         return "Kendaraan{" +
@@ -63,7 +60,7 @@ public class Kendaraan {
                 ", jeniskendaraan='" + jeniskendaraan + '\'' +
                 ", nostnk='" + nostnk + '\'' +
                 ", noPlat='" + noPlat + '\'' +
-                ", idUser=" + idUser +
+                ", NamaUser='" + NamaUser + '\'' +
                 '}';
     }
 }

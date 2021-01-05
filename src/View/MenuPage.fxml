@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPageController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MenuPageController">
    <children>
       <HBox prefHeight="26.0" prefWidth="800.0">
          <children>
-            <MenuBar prefHeight="26.0" prefWidth="845.0">
+            <MenuBar prefHeight="26.0" prefWidth="900.0">
               <menus>
                 <Menu fx:id="MenuFile" mnemonicParsing="false" text="File">
                   <items>
@@ -65,7 +65,7 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#actionlogout" prefHeight="25.0" prefWidth="74.0" text="LogOut">
+            <Button fx:id="LogOutButton" mnemonicParsing="false" onAction="#actionlogout" prefHeight="25.0" prefWidth="74.0" text="LogOut">
                <HBox.margin>
                   <Insets top="10.0" />
                </HBox.margin>
@@ -74,7 +74,7 @@
       </HBox>
       <HBox prefHeight="200.0" prefWidth="800.0">
          <children>
-            <TableView fx:id="TbRiwayatReparasi" prefHeight="200.0" prefWidth="820.0">
+            <TableView fx:id="TbRiwayatReparasi" prefHeight="200.0" prefWidth="847.0">
                <columns>
                   <TableColumn fx:id="ColidReparasi" prefWidth="84.00003051757812" text="IdReparasi" />
                   <TableColumn fx:id="ColidKendaraanR" prefWidth="84.00003051757812" text="IdKendaraan" />
@@ -163,11 +163,11 @@
                </padding>
             </TableView>
             <Label prefHeight="18.0" prefWidth="23.0" />
-            <TableView fx:id="TbDataUser" prefHeight="200.0" prefWidth="233.0">
+            <TableView fx:id="TbDataUser" prefHeight="250.0" prefWidth="307.0">
               <columns>
                 <TableColumn fx:id="ColNama" prefWidth="75.0" text="Nama" />
-                <TableColumn fx:id="ColUsername" prefWidth="91.20001220703125" text="Username" />
-                  <TableColumn fx:id="ColPasswd" prefWidth="59.199951171875" text="Password" />
+                <TableColumn fx:id="ColUsername" prefWidth="111.0" text="Username" />
+                  <TableColumn fx:id="ColPasswd" prefWidth="120.0" text="Password" />
               </columns>
                <opaqueInsets>
                   <Insets />

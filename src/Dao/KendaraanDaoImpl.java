@@ -19,8 +19,11 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public List<Kendaraan> fetchAll() {
         ObservableList<Kendaraan> kendaraans = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT * FROM Kendaraan " +
-                    "FULL OUTER JOIN User ON Kendaraan.User_idUser= User.idUser";
+            String query = "SELECT Kendaraan.idKendaraan, Kendaraan.JenisKendaraan, User.Nama as nama, Kendaraan.NoPlat, Kendaraan.NoSTNK\n" +
+                    "FROM     Kendaraan INNER JOIN\n" +
+                    "                  Reparasi ON Kendaraan.idKendaraan = Reparasi.Kendaraan_idKendaraan INNER JOIN\n" +
+                    "                  SparePart ON Reparasi.idReparasi = SparePart.Reparasi_idReparasi INNER JOIN\n" +
+                    "                  User ON Kendaraan.User_idUser = User.idUser AND Reparasi.User_idUser = User.idUser";
 
             PreparedStatement ps;
             ps= MySQLConnection.createConnection().prepareStatement(query);
@@ -30,9 +33,8 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
                 String jenisKendaraan=rs.getString("JenisKendaraan");
                 String NoSTNK=rs.getString("Nostnk");
                 String NoPlat=rs.getString("Noplat");
-                int idUser=rs.getInt("idUser");
-                User u1=new User(idUser,"","","");
-                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,u1);
+                String Nama=rs.getString("nama");
+                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,Nama);
                 kendaraans.add(k);
             }
         }

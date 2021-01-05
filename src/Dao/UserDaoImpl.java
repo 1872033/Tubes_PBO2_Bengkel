@@ -17,7 +17,7 @@ public class UserDaoImpl implements DaoService <User> {
     public List<User> fetchAll() {
         ObservableList<User> users = FXCollections.observableArrayList();
         try {
-            String query = "SELECT * FROM User";
+            String query = "SELECT * FROM `User`";
 
             PreparedStatement ps;
             ps = MySQLConnection.createConnection().prepareStatement(query);

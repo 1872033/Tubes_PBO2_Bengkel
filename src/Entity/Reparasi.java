@@ -4,17 +4,33 @@ import java.util.Date;
 
 public class Reparasi {
     private int idReparasi;
-    private Date tglreparasi;
+    private String tglreparasi;
     private String jenisreparasi;
-    private Kendaraan idKendaraan;
-    private User idUser;
+    private String idKendaraan;
+    private String NamaPemilik;
 
-    public Reparasi(int idReparasi,Date tglreparasi,String jenisreparasi,Kendaraan idKendaraan,User idUser){
+    public String getIdKendaraan() {
+        return idKendaraan;
+    }
+
+    public void setIdKendaraan(String idKendaraan) {
+        this.idKendaraan = idKendaraan;
+    }
+
+    public String getNamaPemilik() {
+        return NamaPemilik;
+    }
+
+    public void setNamaPemilik(String namaPemilik) {
+        NamaPemilik = namaPemilik;
+    }
+
+    public Reparasi(int idReparasi, String tglreparasi, String jenisreparasi, String idKendaraan, String NamaPemilik){
         this.setIdReparasi(idReparasi);
         this.setTglreparasi(tglreparasi);
         this.setJenisreparasi(jenisreparasi);
         this.setIdKendaraan(idKendaraan);
-        this.setIdUser(idUser);
+        this.setNamaPemilik(NamaPemilik);
 
     }
 
@@ -26,17 +42,15 @@ public class Reparasi {
         this.idReparasi = idReparasi;
     }
 
-    public Date getTglreparasi() {
+    public String getTglreparasi() {
         return tglreparasi;
     }
 
-    public void setTglreparasi(Date tglreparasi) {
+    public void setTglreparasi(String tglreparasi) {
         this.tglreparasi = tglreparasi;
     }
 
-    public User getIdUser() { return idUser; }
 
-    public void setIdUser(User idUser) { this.idUser = idUser; }
 
     public String getJenisreparasi() {
         return jenisreparasi;
@@ -46,22 +60,15 @@ public class Reparasi {
         this.jenisreparasi = jenisreparasi;
     }
 
-    public Kendaraan getIdKendaraan() {
-        return idKendaraan;
-    }
-
-    public void setIdKendaraan(Kendaraan idKendaraan) {
-        this.idKendaraan = idKendaraan;
-    }
 
     @Override
     public String toString() {
         return "Reparasi{" +
                 "idReparasi=" + idReparasi +
-                ", tglreparasi=" + tglreparasi +
+                ", tglreparasi='" + tglreparasi + '\'' +
                 ", jenisreparasi='" + jenisreparasi + '\'' +
-                ", idKendaraan=" + idKendaraan +
-                ", idUser=" + idUser +
+                ", idKendaraan='" + idKendaraan + '\'' +
+                ", NamaPemilik='" + NamaPemilik + '\'' +
                 '}';
     }
 }
