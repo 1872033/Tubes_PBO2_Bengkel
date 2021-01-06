@@ -55,6 +55,17 @@ public class SparePartPageController implements Initializable {
 
     @FXML
     private void ActionHapusSparePart(ActionEvent actionEvent) {
+        SparePart selected;
+        selected = (SparePart) TbSparePart.getSelectionModel().getSelectedItem();
+        System.out.println(selected);
+
+        SparepartDaoImpl dao = new SparepartDaoImpl();
+        int result = dao.deleteData(selected);
+        if(result!=0){
+            System.out.println("Delete Berhasil");
+        }
+        ObservableList<SparePart> uList = (ObservableList<SparePart>) dao.fetchAll();
+        TbSparePart.setItems(uList);
     }
 
     @FXML
