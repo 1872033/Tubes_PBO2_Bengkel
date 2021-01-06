@@ -5,6 +5,7 @@ import Dao.KendaraanDaoImpl;
 import Dao.ReparasiDaoImpl;
 import Entity.Kendaraan;
 import Entity.Reparasi;
+import Entity.SparePart;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -51,6 +52,15 @@ public class TambahSparePartController implements Initializable {
 
     @FXML
     private void actionTambahSparePart(ActionEvent actionEvent) {
+        SparePart sparePart = new SparePart();
+        sparePart.setIdSparepart(sparePart.getIdSparepart());
+        sparePart.setNamaSparepart(sparePart.getNamaSparepart());
+        sparePart.setHargaBeli(sparePart.getHargaBeli());
+        sparePart.setHargaJual(sparePart.getHargaJual());
+        sparePart.setStok(sparePart.getStok());
+
+        Reparasi reparasi = new Reparasi();
+        reparasi.setIdReparasi(cmbBoxIdRep.getValue());
 
     }
 
