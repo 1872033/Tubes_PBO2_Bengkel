@@ -1,5 +1,7 @@
 package Controller;
 
+import Entity.SparePart;
+import Entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,6 +25,11 @@ public class TambahUserController {
 
     @FXML
     private void actionTambahUser(ActionEvent actionEvent) {
+        User user= new User();
+        user.setIdUser(user.getIdUser());
+        user.setNama(user.getNama());
+        user.setUsername(user.getUsername());
+        user.setPassword(user.getPassword());
 
     }
 
