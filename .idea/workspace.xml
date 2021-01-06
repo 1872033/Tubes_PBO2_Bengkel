@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Penambahan Fungsi Hapus Kendaraan sudah berhasil">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Penambahan Fungsi Hapus SparePart sudah berhasil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SparePartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SparePartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/MenuPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MenuPageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +238,7 @@
       <workItem from="1609830631241" duration="5956000" />
       <workItem from="1609836662551" duration="7488000" />
       <workItem from="1609846692299" duration="9277000" />
-      <workItem from="1609891979702" duration="2670000" />
+      <workItem from="1609891979702" duration="3965000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -331,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609894238644</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Penambahan Fungsi Hapus SparePart sudah berhasil">
+      <created>1609894691663</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609894691663</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +385,8 @@
     <MESSAGE value="Penyempurnaan navigasi(belum sempurna logoutnya)" />
     <MESSAGE value="Perbaikan View Karena Update Database" />
     <MESSAGE value="Penambahan Fungsi Hapus Kendaraan sudah berhasil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Penambahan Fungsi Hapus Kendaraan sudah berhasil" />
+    <MESSAGE value="Penambahan Fungsi Hapus SparePart sudah berhasil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Penambahan Fungsi Hapus SparePart sudah berhasil" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -8,10 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -35,6 +32,8 @@ public class LoginController implements Initializable {
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
     private TransformationList<Object, Object> event;
+    @FXML
+    private Button btnLogin;
 
     public LoginController() {
         connection = MySQLConnection.getConnection();
@@ -82,6 +81,8 @@ public class LoginController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
     }
+        Stage stage = (Stage) btnLogin.getScene().getWindow();
+        stage.close();
 }
 
     public static void infoBox(String enter_correct_email_and_password, String failed, Object o) {

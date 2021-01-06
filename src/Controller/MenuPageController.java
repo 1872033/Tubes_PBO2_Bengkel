@@ -115,6 +115,17 @@ public class MenuPageController implements Initializable {
 
     @FXML
     private void ActionHapusReparasi(ActionEvent actionEvent) {
+        Reparasi selected;
+        selected = (Reparasi) TbRiwayatReparasi.getSelectionModel().getSelectedItem();
+        System.out.println(selected);
+
+        ReparasiDaoImpl rdao = new ReparasiDaoImpl();
+        int result = rdao.deleteData(selected);
+        if(result!=0){
+            System.out.println("Delete Berhasil");
+        }
+        ObservableList<Reparasi> uList = (ObservableList<Reparasi>) rdao.fetchAll();
+        TbRiwayatReparasi.setItems(uList);
 
     }
 
@@ -168,6 +179,17 @@ public class MenuPageController implements Initializable {
 
     @FXML
     private void ActionHapusUser(ActionEvent actionEvent) {
+        User selected;
+        selected = (User) TbDataUser.getSelectionModel().getSelectedItem();
+        System.out.println(selected);
+
+        UserDaoImpl dao = new UserDaoImpl();
+        int result = dao.deleteData(selected);
+        if(result!=0){
+            System.out.println("Delete Berhasil");
+        }
+        ObservableList<User> uList = (ObservableList<User>) dao.fetchAll();
+        TbDataUser.setItems(uList);
     }
 
     @FXML
