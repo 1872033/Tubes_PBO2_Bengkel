@@ -1,6 +1,7 @@
 package Dao;
 
 import Entity.Kendaraan;
+import Entity.User;
 import Utility.DaoService;
 import Utility.MySQLConnection;
 import javafx.collections.FXCollections;
@@ -17,7 +18,7 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public List<Kendaraan> fetchAll() {
         ObservableList<Kendaraan> kendaraans = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT Kendaraan.idKendaraan as idKendaraan, Kendaraan.JenisKendaraan as JenisKendaraan , User.Nama as nama, Kendaraan.NoPlat as Noplat, Kendaraan.NoSTNK as Nostnk\n" +
+            String query = "SELECT Kendaraan.idKendaraan as idKendaraan, Kendaraan.JenisKendaraan as JenisKendaraan , User.Nama as nama, User.idUser as id, Kendaraan.NoPlat as Noplat, Kendaraan.NoSTNK as Nostnk\n" +
                     "FROM     SparePart INNER JOIN\n" +
                     "                  Reparasi ON SparePart.Reparasi_idReparasi = Reparasi.idReparasi INNER JOIN\n" +
                     "                  User ON Reparasi.User_idUser = User.idUser INNER JOIN\n" +
@@ -32,7 +33,8 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
                 String NoSTNK=rs.getString("Nostnk");
                 String NoPlat=rs.getString("Noplat");
                 String Nama=rs.getString("nama");
-                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,Nama);
+                String Id=rs.getString("id");
+                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,Nama,Id);
                 kendaraans.add(k);
             }
         }
@@ -71,12 +73,13 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public int editData(Kendaraan object) {
         int result = 0;
         try {
-            String query = "UPDATE kendaraan SET jeniskendaraan=? ,nostnk=? ,noplat=? WHERE idKendaraan=?";
+            String query = "UPDATE kendaraan SET jeniskendaraan=? ,nostnk=? ,noplat=?,User_idUser=? WHERE idKendaraan=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getJeniskendaraan());
             ps.setString(2, object.getNostnk());
             ps.setString(3, object.getNoPlat());
-            ps.setInt(4, object.getIdKendaraan());
+            ps.setInt(4, Integer.parseInt(object.getIdUser()));
+            ps.setInt(5, object.getIdKendaraan());
 
 
         } catch (SQLException throwables) {

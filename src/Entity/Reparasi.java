@@ -8,6 +8,15 @@ public class Reparasi {
     private String jenisreparasi;
     private String idKendaraan;
     private String NamaPemilik;
+    private String idPemilik;
+
+    public String getIdPemilik() {
+        return idPemilik;
+    }
+
+    public void setIdPemilik(String idPemilik) {
+        this.idPemilik = idPemilik;
+    }
 
     public String getIdKendaraan() {
         return idKendaraan;
@@ -25,12 +34,13 @@ public class Reparasi {
         NamaPemilik = namaPemilik;
     }
 
-    public Reparasi(int idReparasi, String tglreparasi, String jenisreparasi, String idKendaraan, String NamaPemilik){
+    public Reparasi(int idReparasi, String tglreparasi, String jenisreparasi, String idKendaraan, String NamaPemilik,String idPemilik){
         this.setIdReparasi(idReparasi);
         this.setTglreparasi(tglreparasi);
         this.setJenisreparasi(jenisreparasi);
         this.setIdKendaraan(idKendaraan);
         this.setNamaPemilik(NamaPemilik);
+        this.setIdPemilik(idPemilik);
 
     }
 

@@ -1,5 +1,6 @@
 package Controller;
 
+import Dao.KendaraanDaoImpl;
 import Dao.UserDaoImpl;
 import Entity.Kendaraan;
 import Entity.User;
@@ -39,12 +40,16 @@ public class UpdateKendaraanController implements Initializable {
         txtJenisKendaraan.setText(String.valueOf(controller.k.getJeniskendaraan()));
         txtNoPlat.setText(String.valueOf(controller.k.getNoPlat()));
         txtNoSTNK.setText(String.valueOf(controller.k.getNostnk()));
+        UserDaoImpl uDao = new UserDaoImpl();
+        ObservableList<User> uList = (ObservableList<User>) uDao.fetchAll();
+        CmbBoxUser.setItems(uList);
         kendaraan = controller.k;
     }
 
 
     @FXML
     private void actionUpdateKendaraan(ActionEvent actionEvent) {
+
     }
 
     @FXML
@@ -56,9 +61,7 @@ public class UpdateKendaraanController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         txtIdKendaraan.setDisable(true);
-        UserDaoImpl uDao = new UserDaoImpl();
-        ObservableList<User> uList = (ObservableList<User>) uDao.fetchAll();
-        CmbBoxUser.setItems(uList);
+
 
     }
 }

@@ -73,6 +73,12 @@ public class MenuPageController implements Initializable {
     public Reparasi r;
 
     public User u;
+    public void refreshUpdate(){
+        TbDataKendaraan.refresh();
+        TbDataUser.refresh();
+        TbRiwayatReparasi.refresh();
+    }
+
 
 
     @FXML
@@ -93,7 +99,7 @@ public class MenuPageController implements Initializable {
         TbRiwayatReparasi.setItems(rList);
         ColidReparasi.setCellValueFactory(data-> new SimpleObjectProperty<>(data.getValue().getIdReparasi()));
         ColidKendaraanR.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdKendaraan()));
-        ColidNamaPemilikR.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNamaPemilik()));
+        ColidNamaPemilikR.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdPemilik()));
         ColTanggal.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getTglreparasi()));
         ColJenisReparasi.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getJenisreparasi()));
 
@@ -102,7 +108,7 @@ public class MenuPageController implements Initializable {
         TbDataKendaraan.setItems(kList);
         ColidKendaraanDK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdKendaraan()));
         ColJenisKendaraan.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getJeniskendaraan()));
-        ColNamaPemilikDK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNamaUser()));
+        ColNamaPemilikDK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdUser()));
         ColNoPlat.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNoPlat()));
         ColNoSTNK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNostnk()));
 

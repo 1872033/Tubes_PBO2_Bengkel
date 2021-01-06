@@ -17,7 +17,7 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
     public List<Reparasi> fetchAll() {
         ObservableList<Reparasi> reparasis = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT Reparasi.idReparasi as idReparasi, Kendaraan.idKendaraan as idKen, User.Nama as namaPemilik, Reparasi.TglReparasi as tglreparasi, Reparasi.JenisReparasi as jenisReparasi\n" +
+            String query = "SELECT Reparasi.idReparasi as idReparasi, Kendaraan.idKendaraan as idKen, User.Nama as namaPemilik, User.idUser as idPemilik, Reparasi.TglReparasi as tglreparasi, Reparasi.JenisReparasi as jenisReparasi\n" +
                     "FROM     SparePart INNER JOIN\n" +
                     "                  Reparasi ON SparePart.Reparasi_idReparasi = Reparasi.idReparasi INNER JOIN\n" +
                     "                  User ON Reparasi.User_idUser = User.idUser INNER JOIN\n" +
@@ -32,8 +32,9 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
                 String jenisreparasi=rs.getString("jenisReparasi");
                 String idKendaraan=rs.getString("idKen");
                 String namaPem=rs.getString("namaPemilik");
+                String idPem=rs.getString("idPemilik");
 
-                Reparasi r = new Reparasi(idReparasi,tglreparasi,jenisreparasi,idKendaraan,namaPem);
+                Reparasi r = new Reparasi(idReparasi,tglreparasi,jenisreparasi,idKendaraan,namaPem,idPem);
                 reparasis.add(r);
             }
         }

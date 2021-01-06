@@ -73,7 +73,7 @@
                <columns>
                   <TableColumn fx:id="ColidReparasi" prefWidth="84.00003051757812" text="IdReparasi" />
                   <TableColumn fx:id="ColidKendaraanR" prefWidth="84.00003051757812" text="IdKendaraan" />
-                  <TableColumn fx:id="ColidNamaPemilikR" prefWidth="95.199951171875" text="NamaPemilik" />
+                  <TableColumn fx:id="ColidNamaPemilikR" prefWidth="95.199951171875" text="Id Pemilik" />
                   <TableColumn fx:id="ColTanggal" minWidth="0.0" prefWidth="90.39996337890625" text="Tanggal" />
                   <TableColumn fx:id="ColJenisReparasi" prefWidth="605.6000366210938" text="Jenis Reparasi " />
                </columns>
@@ -149,7 +149,7 @@
                <columns>
                   <TableColumn fx:id="ColidKendaraanDK" prefWidth="84.80001831054688" text="IdKendaraan" />
                   <TableColumn fx:id="ColJenisKendaraan" prefWidth="88.79998779296875" text="Jenis Kendaraan" />
-                  <TableColumn fx:id="ColNamaPemilikDK" prefWidth="100.00006103515625" text="Nama Pemilik" />
+                  <TableColumn fx:id="ColNamaPemilikDK" prefWidth="100.00006103515625" text="Id Pemilik" />
                   <TableColumn fx:id="ColNoPlat" prefWidth="75.0" text="NoPlat" />
                   <TableColumn fx:id="ColNoSTNK" minWidth="0.0" prefWidth="204.79998779296875" text="STNK" />
                </columns>

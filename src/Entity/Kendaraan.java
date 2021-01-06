@@ -6,23 +6,34 @@ public class Kendaraan {
     private String nostnk;
     private  String noPlat;
     private String NamaUser;
+    private String idUser;
 
-    public Kendaraan(int idKendaraan,String jeniskendaraan,String nostnk,String noPlat,String NamaUser){
-        this.setIdKendaraan(idKendaraan);
-        this.setJeniskendaraan(jeniskendaraan);
-        this.setNostnk(nostnk);
-        this.setNoPlat(noPlat);
-        this.setNamaUser(NamaUser);
+    public String getIdUser() {
+        return idUser;
+    }
 
+    public void setIdUser(String idUser) {
+        this.idUser = idUser;
     }
 
     public String getNamaUser() {
         return NamaUser;
     }
 
-    private void setNamaUser(String namaUser) {
-        this.NamaUser=namaUser;
+    public void setNamaUser(String namaUser) {
+        NamaUser = namaUser;
     }
+
+    public Kendaraan(int idKendaraan, String jeniskendaraan, String nostnk, String noPlat, String NamaUser,String idUser){
+        this.setIdKendaraan(idKendaraan);
+        this.setJeniskendaraan(jeniskendaraan);
+        this.setNostnk(nostnk);
+        this.setNoPlat(noPlat);
+        this.setNamaUser(NamaUser);
+        this.setIdUser(idUser);
+
+    }
+
 
 
     public int getIdKendaraan() {

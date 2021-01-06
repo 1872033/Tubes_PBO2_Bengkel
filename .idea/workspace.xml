@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Penambahan Fungsi Hapus User dan Kendaraan belum berhasil">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Penambahan navigasi dan action selected pada semua update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bengkel_Anthony_Ray_Ronaldo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/MenuPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MenuPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SparePartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SparePartPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TambahKendaraanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TambahKendaraanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TambahReparasiCOntroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TambahReparasiCOntroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TambahSparePartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TambahSparePartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UpdateKendaraanController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UpdateKendaraanController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UpdateReparasiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UpdateReparasiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UpdateSparePartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UpdateSparePartController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UpdateUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UpdateUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/KendaraanDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/KendaraanDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Dao/ReparasiDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Dao/ReparasiDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Kendaraan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Kendaraan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Reparasi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Reparasi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/MenuPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MenuPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/SparePartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/SparePartPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/TambahReparasi.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/TambahReparasi.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/UpdateReparasi.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/UpdateReparasi.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +247,7 @@
       <workItem from="1609830631241" duration="5956000" />
       <workItem from="1609836662551" duration="7488000" />
       <workItem from="1609846692299" duration="9277000" />
-      <workItem from="1609891979702" duration="7751000" />
+      <workItem from="1609891979702" duration="11202000" />
     </task>
     <task id="LOCAL-00001" summary="Pembuatan Login Page">
       <created>1607841445894</created>
@@ -360,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609898731673</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Penambahan navigasi dan action selected pada semua update">
+      <created>1609902431452</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609902431452</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +410,8 @@
     <MESSAGE value="Penambahan Fungsi Hapus Kendaraan sudah berhasil" />
     <MESSAGE value="Penambahan Fungsi Hapus SparePart sudah berhasil" />
     <MESSAGE value="Penambahan Fungsi Hapus User dan Kendaraan belum berhasil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Penambahan Fungsi Hapus User dan Kendaraan belum berhasil" />
+    <MESSAGE value="Penambahan navigasi dan action selected pada semua update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Penambahan navigasi dan action selected pada semua update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,5 +1,6 @@
 package Controller;
 
+import Dao.UserDaoImpl;
 import Entity.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,7 +45,12 @@ public class UpdateUserController implements Initializable {
 
     @FXML
     private void actionUpdateUser(ActionEvent actionEvent) {
-
+        UserDaoImpl uDAO = new UserDaoImpl();
+        user.setNama(txtNamaUser.getText().trim());
+        user.setUsername(txtUsername.getText().trim());
+        user.setPassword(txtPassword.getText().trim());
+        uDAO.editData(user);
+        controller.refreshUpdate();
     }
 
     @FXML

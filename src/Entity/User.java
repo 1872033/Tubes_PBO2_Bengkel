@@ -48,6 +48,6 @@ public class User {
 
     @Override
     public String toString() {
-        return nama;
+        return String.valueOf(idUser);
     }
 }
