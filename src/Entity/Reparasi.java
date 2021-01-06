@@ -63,12 +63,7 @@ public class Reparasi {
 
     @Override
     public String toString() {
-        return "Reparasi{" +
-                "idReparasi=" + idReparasi +
-                ", tglreparasi='" + tglreparasi + '\'' +
-                ", jenisreparasi='" + jenisreparasi + '\'' +
-                ", idKendaraan='" + idKendaraan + '\'' +
-                ", NamaPemilik='" + NamaPemilik + '\'' +
-                '}';
+        return
+                "id=" + idReparasi ;
     }
 }

@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -66,6 +67,13 @@ public class MenuPageController implements Initializable {
     private ListView ListUser;
 
     private Stage StagetoAdd;
+
+    public Kendaraan k;
+
+    public Reparasi r;
+
+    public User u;
+
 
     @FXML
     private Button LogOutButton;
@@ -130,7 +138,17 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void ActionUpdateReparasi(ActionEvent actionEvent) {
+    private void ActionUpdateReparasi(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader1 = new FXMLLoader();
+        loader1.setLocation(Main.class.getResource("../View/UpdateReparasi.fxml"));
+        VBox root = loader1.load();
+
+        UpdateReparasiController UptCont = loader1.getController();
+        UptCont.setController(this);
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Update Reparasi");
+        StagetoAdd.show();
     }
 
     @FXML
@@ -162,7 +180,17 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void ActionUpdateKendaraan(ActionEvent actionEvent) {
+    private void ActionUpdateKendaraan(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader1 = new FXMLLoader();
+        loader1.setLocation(Main.class.getResource("../View/UpdateKendaraan.fxml"));
+        VBox root = loader1.load();
+
+        UpdateKendaraanController UptCont = loader1.getController();
+        UptCont.setController(this);
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Update Kendaraan ");
+        StagetoAdd.show();
     }
 
     @FXML
@@ -193,7 +221,18 @@ public class MenuPageController implements Initializable {
     }
 
     @FXML
-    private void ActionUpdateUser(ActionEvent actionEvent) {
+    private void ActionUpdateUser(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader1 = new FXMLLoader();
+        loader1.setLocation(Main.class.getResource("../View/UpdateUser.fxml"));
+        VBox root = loader1.load();
+
+        UpdateUserController UptCont = loader1.getController();
+        UptCont.setController(this);
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Update User ");
+        StagetoAdd.show();
+
     }
 
 
@@ -224,4 +263,19 @@ public class MenuPageController implements Initializable {
     }
 
 
+    @FXML
+    private void actionSelectedUser(MouseEvent mouseEvent) {
+        u=TbDataUser.getSelectionModel().getSelectedItem();
+    }
+
+    @FXML
+    private void actionSelectedKendaraan(MouseEvent mouseEvent) {
+        k= TbDataKendaraan.getSelectionModel().getSelectedItem();
+    }
+
+    @FXML
+    private void actionSelectedReparasi(MouseEvent mouseEvent) {
+        r= TbRiwayatReparasi.getSelectionModel().getSelectedItem();
+
+    }
 }

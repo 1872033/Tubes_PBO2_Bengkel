@@ -2,6 +2,7 @@ package Controller;
 
 import Bengkel_Anthony_Ray_Ronaldo.Main;
 import Dao.SparepartDaoImpl;
+import Entity.Reparasi;
 import Entity.SparePart;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -15,6 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -40,6 +42,9 @@ public class SparePartPageController implements Initializable {
     private Stage StagetoAdd;
     @FXML
     private Button btnExit;
+
+    public SparePart s;
+
 
     @FXML
     private void ActionTambahSparePart(ActionEvent actionEvent) throws IOException {
@@ -69,7 +74,17 @@ public class SparePartPageController implements Initializable {
     }
 
     @FXML
-    private void ActionUpdateSparePart(ActionEvent actionEvent) {
+    private void ActionUpdateSparePart(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader1 = new FXMLLoader();
+        loader1.setLocation(Main.class.getResource("../View/UpdateSparePart.fxml"));
+        VBox root = loader1.load();
+
+        UpdateSparePartController UptCont = loader1.getController();
+        UptCont.setController(this);
+        Scene new_scene = new Scene(root);
+        StagetoAdd.setScene(new_scene);
+        StagetoAdd.setTitle("Update Reparasi");
+        StagetoAdd.show();
     }
 
     public void exitaction(ActionEvent actionEvent) {
@@ -100,5 +115,10 @@ public class SparePartPageController implements Initializable {
         ColHargaJual.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getHargaJual()));
         ColStok.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getStok()));
         ColIdRep.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdRep()));
+    }
+
+    @FXML
+    private void actionSelectedSparePart(MouseEvent mouseEvent) {
+        s= TbSparePart.getSelectionModel().getSelectedItem();
     }
 }

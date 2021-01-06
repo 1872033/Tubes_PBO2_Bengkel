@@ -69,7 +69,7 @@
       </HBox>
       <HBox prefHeight="200.0" prefWidth="800.0">
          <children>
-            <TableView fx:id="TbRiwayatReparasi" prefHeight="200.0" prefWidth="847.0">
+            <TableView fx:id="TbRiwayatReparasi" onMouseClicked="#actionSelectedReparasi" prefHeight="200.0" prefWidth="847.0">
                <columns>
                   <TableColumn fx:id="ColidReparasi" prefWidth="84.00003051757812" text="IdReparasi" />
                   <TableColumn fx:id="ColidKendaraanR" prefWidth="84.00003051757812" text="IdKendaraan" />
@@ -145,7 +145,7 @@
       </HBox>
       <HBox prefHeight="200.0" prefWidth="800.0">
          <children>
-            <TableView fx:id="TbDataKendaraan" prefHeight="200.0" prefWidth="519.0">
+            <TableView fx:id="TbDataKendaraan" onMouseClicked="#actionSelectedKendaraan" prefHeight="200.0" prefWidth="519.0">
                <columns>
                   <TableColumn fx:id="ColidKendaraanDK" prefWidth="84.80001831054688" text="IdKendaraan" />
                   <TableColumn fx:id="ColJenisKendaraan" prefWidth="88.79998779296875" text="Jenis Kendaraan" />
@@ -158,7 +158,7 @@
                </padding>
             </TableView>
             <Label prefHeight="18.0" prefWidth="23.0" />
-            <TableView fx:id="TbDataUser" prefHeight="250.0" prefWidth="307.0">
+            <TableView fx:id="TbDataUser" onMouseClicked="#actionSelectedUser" prefHeight="250.0" prefWidth="307.0">
               <columns>
                 <TableColumn fx:id="ColNama" prefWidth="75.0" text="Nama" />
                 <TableColumn fx:id="ColUsername" prefWidth="111.0" text="Username" />

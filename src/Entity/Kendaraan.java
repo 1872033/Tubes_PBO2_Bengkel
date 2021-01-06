@@ -55,12 +55,8 @@ public class Kendaraan {
 
     @Override
     public String toString() {
-        return "Kendaraan{" +
-                "idKendaraan=" + idKendaraan +
-                ", jeniskendaraan='" + jeniskendaraan + '\'' +
-                ", nostnk='" + nostnk + '\'' +
-                ", noPlat='" + noPlat + '\'' +
-                ", NamaUser='" + NamaUser + '\'' +
-                '}';
+        return
+                "id = " + idKendaraan +
+                " | jenis = " + jeniskendaraan;
     }
 }

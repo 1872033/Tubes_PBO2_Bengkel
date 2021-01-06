@@ -43,7 +43,7 @@
         </HBox>
         <HBox prefHeight="200.0" prefWidth="550.0">
             <children>
-                <TableView fx:id="TbSparePart" prefHeight="200.0" prefWidth="650.0">
+                <TableView fx:id="TbSparePart" onMouseClicked="#actionSelectedSparePart" prefHeight="200.0" prefWidth="650.0">
                     <columns>
                         <TableColumn fx:id="ColidSparePart" prefWidth="125.60000324249268" text="IdSparePart" />
                         <TableColumn fx:id="ColNamaSparePart" prefWidth="88.79998779296875" text="Nama" />
