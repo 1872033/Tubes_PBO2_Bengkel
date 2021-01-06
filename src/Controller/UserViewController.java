@@ -7,6 +7,7 @@ import Dao.UserViewDaoImpl;
 import Entity.Kendaraan;
 import Entity.User;
 import Entity.UserView;
+import Utility.MySQLConnection;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.ObservableList;
@@ -20,9 +21,15 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 public class UserViewController implements Initializable {
@@ -59,6 +66,18 @@ public class UserViewController implements Initializable {
 
     @FXML
     private void actionCetak(ActionEvent actionEvent) {
+        JasperPrint jp;
+        Map param = new HashMap();
+
+        try {
+            jp = JasperFillManager.fillReport("report/Reparasi.jasper",
+                    param, MySQLConnection.getConnection());
+            JasperViewer viewer = new JasperViewer(jp, false);
+            viewer.setTitle("Summary");
+            viewer.setVisible(true);
+        } catch (JRException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     @FXML
