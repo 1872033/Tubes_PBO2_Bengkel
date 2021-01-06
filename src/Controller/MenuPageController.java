@@ -136,6 +136,18 @@ public class MenuPageController implements Initializable {
 
     @FXML
     private void ActionHapusKendaraan(ActionEvent actionEvent) {
+        Kendaraan selected;
+        selected = (Kendaraan) TbDataKendaraan.getSelectionModel().getSelectedItem();
+        System.out.println(selected);
+
+        KendaraanDaoImpl dao = new KendaraanDaoImpl();
+        int result = dao.deleteData(selected);
+        if(result!=0){
+            System.out.println("Delete Berhasil");
+        }
+        ObservableList<Kendaraan> uList = (ObservableList<Kendaraan>) dao.fetchAll();
+        TbDataKendaraan.setItems(uList);
+
     }
 
     @FXML
