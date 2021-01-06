@@ -1,6 +1,7 @@
 package Controller;
 
 import Dao.UserDaoImpl;
+import Entity.Kendaraan;
 import Entity.User;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -30,6 +31,17 @@ public class TambahKendaraanController implements Initializable {
 
     @FXML
     private void actionTambahKendaraan(ActionEvent actionEvent) {
+        Kendaraan kendaraan = new Kendaraan();
+        kendaraan.setIdKendaraan(kendaraan.getIdKendaraan());
+        kendaraan.setJeniskendaraan(kendaraan.getJeniskendaraan());
+        kendaraan.setNostnk(kendaraan.getNostnk());
+        kendaraan.setNoPlat(kendaraan.getNoPlat());
+
+        User user = new User();
+        user.setIdUser(CmbBoxUser.getValue());
+
+
+
     }
 
     @FXML
