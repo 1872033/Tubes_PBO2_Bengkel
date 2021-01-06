@@ -3,6 +3,7 @@ package Controller;
 import Dao.KendaraanDaoImpl;
 import Dao.UserDaoImpl;
 import Entity.Kendaraan;
+import Entity.Reparasi;
 import Entity.User;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -32,6 +33,16 @@ public class TambahReparasiCOntroller implements Initializable {
 
     @FXML
     private void actionTambahReparasi(ActionEvent actionEvent) {
+        Reparasi reparasi = new Reparasi();
+        reparasi.setIdReparasi(reparasi.getIdReparasi());
+        reparasi.setTglreparasi(reparasi.getTglreparasi());
+        reparasi.setJenisreparasi(reparasi.getJenisreparasi());
+
+        Kendaraan kendaraan = new Kendaraan();
+        kendaraan.setIdKendaraan(CmbBoxIdKendaraan.getValue());
+
+        User user = new User();
+        user.setIdUser(CmbBoxIdUser.getValue());
 
     }
 
