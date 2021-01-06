@@ -17,12 +17,11 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
     public List<Reparasi> fetchAll() {
         ObservableList<Reparasi> reparasis = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT \n" +
-                    "Reparasi.idReparasi, Kendaraan.idKendaraan as idKen, \n" +
-                    "User.Nama as namaPemilik, Reparasi.TglReparasi, Reparasi.JenisReparasi\n" +
-                    "FROM   Kendaraan INNER JOIN\n" +
-                    "\tReparasi ON Kendaraan.idKendaraan = Reparasi.Kendaraan_idKendaraan INNER JOIN\n" +
-                    "\tSparePart ON Reparasi.idReparasi = SparePart.Reparasi_idReparasi INNER JOIN User ON Kendaraan.User_idUser = User.idUser AND Reparasi.User_idUser = User.idUser";
+            String query = "SELECT Reparasi.idReparasi as idReparasi, Kendaraan.idKendaraan as idKen, User.Nama as namaPemilik, Reparasi.TglReparasi as tglreparasi, Reparasi.JenisReparasi as jenisReparasi\n" +
+                    "FROM     SparePart INNER JOIN\n" +
+                    "                  Reparasi ON SparePart.Reparasi_idReparasi = Reparasi.idReparasi INNER JOIN\n" +
+                    "                  User ON Reparasi.User_idUser = User.idUser INNER JOIN\n" +
+                    "                  Kendaraan ON User.idUser =Kendaraan.User_idUser";
 
             PreparedStatement ps;
             ps= MySQLConnection.createConnection().prepareStatement(query);

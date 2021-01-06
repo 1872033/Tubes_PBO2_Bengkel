@@ -16,11 +16,12 @@ public class UserViewDaoImpl implements DaoService {
     public List<UserView> fetchAll() {
         ObservableList<UserView> userViews = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT Kendaraan.NoPlat as Noplat, Kendaraan.JenisKendaraan as JenisKendaraan, User.Nama as nama, Reparasi.TglReparasi as tglRep, Reparasi.JenisReparasi as JenisRep\n" +
-                    "FROM     Kendaraan INNER JOIN\n" +
-                    "                  Reparasi ON Kendaraan.idKendaraan = Reparasi.Kendaraan_idKendaraan INNER JOIN\n" +
-                    "                  SparePart ON Reparasi.idReparasi = SparePart.Reparasi_idReparasi INNER JOIN\n" +
-                    "                  User ON Kendaraan.User_idUser = User.idUser AND Reparasi.User_idUser = User.idUser";
+            String query = "SELECT Kendaraan.NoPlat as Noplat, Kendaraan.JenisKendaraan as JenisKendaraan, User.Nama as nama, \n" +
+                    "Reparasi.TglReparasi as tglRep, Reparasi.JenisReparasi as JenisRep \n" +
+                    "FROM     SparePart INNER JOIN\n" +
+                    "                  Reparasi ON SparePart.Reparasi_idReparasi = Reparasi.idReparasi INNER JOIN\n" +
+                    "                  User ON Reparasi.User_idUser = User.idUser INNER JOIN\n" +
+                    "                  Kendaraan ON User.idUser = Kendaraan.User_idUser";
 
             PreparedStatement ps;
             ps= MySQLConnection.createConnection().prepareStatement(query);
