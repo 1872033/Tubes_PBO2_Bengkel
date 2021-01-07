@@ -19,8 +19,6 @@ import java.util.ResourceBundle;
 
 public class TambahKendaraanController implements Initializable {
     @FXML
-    private TextField txtIdKendaraan;
-    @FXML
     private TextField txtJenisKendaraan;
     @FXML
     private TextField txtNoSTNK;

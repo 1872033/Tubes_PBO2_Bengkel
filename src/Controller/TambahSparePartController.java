@@ -24,8 +24,6 @@ import java.util.ResourceBundle;
 
 public class TambahSparePartController implements Initializable {
     @FXML
-    private TextField txtIdSparePart;
-    @FXML
     private TextField txtNamaSparePart;
     @FXML
     private TextField txtHargaBeli;
@@ -53,7 +51,6 @@ public class TambahSparePartController implements Initializable {
     @FXML
     private void actionTambahSparePart(ActionEvent actionEvent) {
         SparePart sparePart = new SparePart();
-        sparePart.setIdSparepart(sparePart.getIdSparepart());
         sparePart.setNamaSparepart(sparePart.getNamaSparepart());
         sparePart.setHargaBeli(sparePart.getHargaBeli());
         sparePart.setHargaJual(sparePart.getHargaJual());

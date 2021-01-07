@@ -17,8 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class UpdateKendaraanController implements Initializable {
-    @FXML
-    private TextField txtIdKendaraan;
+
     @FXML
     private TextField txtJenisKendaraan;
     @FXML
@@ -36,7 +35,6 @@ public class UpdateKendaraanController implements Initializable {
 
     public void setController(MenuPageController controller) {
         this.controller = controller;
-        txtIdKendaraan.setText(String.valueOf(controller.k.getIdKendaraan()));
         txtJenisKendaraan.setText(String.valueOf(controller.k.getJeniskendaraan()));
         txtNoPlat.setText(String.valueOf(controller.k.getNoPlat()));
         txtNoSTNK.setText(String.valueOf(controller.k.getNostnk()));
@@ -60,7 +58,6 @@ public class UpdateKendaraanController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtIdKendaraan.setDisable(true);
 
 
     }

@@ -9,33 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahKendaraanController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="275.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TambahKendaraanController">
     <children>
-        <HBox prefHeight="50.0" prefWidth="600.0">
-            <children>
-                <Label prefHeight="27.0" prefWidth="120.0" text="ID Kendaraan">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                    <font>
-                        <Font size="14.0" />
-                    </font>
-                </Label>
-                <TextField fx:id="txtIdKendaraan">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                    </padding>
-                </TextField>
-            </children>
-        </HBox>
+        <HBox prefHeight="50.0" prefWidth="600.0" />
         <HBox prefHeight="50.0" prefWidth="200.0">
             <children>
                 <Label prefHeight="27.0" prefWidth="120.0" text="Jenis Kendaraan">
