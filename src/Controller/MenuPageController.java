@@ -3,9 +3,11 @@ package Controller;
 import Bengkel_Anthony_Ray_Ronaldo.Main;
 import Dao.KendaraanDaoImpl;
 import Dao.ReparasiDaoImpl;
+import Dao.SparepartDaoImpl;
 import Dao.UserDaoImpl;
 import Entity.Kendaraan;
 import Entity.Reparasi;
+import Entity.SparePart;
 import Entity.User;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -117,6 +119,23 @@ public class MenuPageController implements Initializable {
             rDAO=new ReparasiDaoImpl();
         }
         return rDAO;
+    }
+
+    private SparepartDaoImpl spDAO;
+    public SparepartDaoImpl getSparepartDAO(){
+        if (spDAO==null) {
+            spDAO=new SparepartDaoImpl();
+        }
+        return spDAO;
+    }
+
+    public ObservableList<SparePart> spList;
+    public ObservableList<SparePart> getSparepart(){
+        if (spList==null) {
+            spList=FXCollections.observableArrayList();
+            spList.addAll(getSparepartDAO().fetchAll());
+        }
+        return spList;
     }
 
 

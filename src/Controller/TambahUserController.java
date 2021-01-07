@@ -10,8 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 public class TambahUserController {
-    @FXML
-    private TextField txtIdUser;
+
     @FXML
     private TextField txtNamaUser;
     @FXML
@@ -22,14 +21,19 @@ public class TambahUserController {
     private PasswordField txtConfirmPassword;
     @FXML
     private Button btnCancel;
+    private MenuPageController controller;
+
 
     @FXML
     private void actionTambahUser(ActionEvent actionEvent) {
         User user= new User();
-        user.setIdUser(user.getIdUser());
-        user.setNama(user.getNama());
-        user.setUsername(user.getUsername());
-        user.setPassword(user.getPassword());
+        user.setNama(txtNamaUser.getText());
+        user.setUsername(txtUsername.getText());
+        user.setPassword(txtPassword.getText());
+
+        controller.getuDAO().addData(user);
+        controller.dList.clear();
+        controller.dList.addAll(controller.getUserDAO().fetchAll());
 
     }
 

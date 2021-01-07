@@ -3,6 +3,7 @@ package Controller;
 import Bengkel_Anthony_Ray_Ronaldo.Main;
 import Dao.KendaraanDaoImpl;
 import Dao.ReparasiDaoImpl;
+import Dao.SparepartDaoImpl;
 import Entity.Kendaraan;
 import Entity.Reparasi;
 import Entity.SparePart;
@@ -35,6 +36,8 @@ public class TambahSparePartController implements Initializable {
     private Button btnCancel;
     @FXML
     private ComboBox<Reparasi> cmbBoxIdRep;
+    private MenuPageController controller;
+
 
     @FXML
     private void actionCancelSparePart(ActionEvent actionEvent) throws IOException {
@@ -51,13 +54,17 @@ public class TambahSparePartController implements Initializable {
     @FXML
     private void actionTambahSparePart(ActionEvent actionEvent) {
         SparePart sparePart = new SparePart();
-        sparePart.setNamaSparepart(sparePart.getNamaSparepart());
-        sparePart.setHargaBeli(sparePart.getHargaBeli());
-        sparePart.setHargaJual(sparePart.getHargaJual());
-        sparePart.setStok(sparePart.getStok());
+        sparePart.setNamaSparepart(txtNamaSparePart.getText());
+        sparePart.setHargaBeli(Integer.valueOf(txtHargaBeli.getText()));
+        sparePart.setHargaJual(Integer.valueOf(txtHargaJual.getText()));
+        sparePart.setStok(Integer.valueOf(txtStok.getText()));
 
         Reparasi reparasi = new Reparasi();
         reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
+
+        controller.getSparepartDAO().addData(sparePart);
+        controller.spList.clear();
+        controller.spList.addAll(controller.getSparepartDAO().fetchAll());
 
     }
 

@@ -14,8 +14,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class UpdateUserController implements Initializable {
-    @FXML
-    private TextField txtIdUser;
+
     @FXML
     private TextField txtNamaUser;
     @FXML
@@ -33,7 +32,6 @@ public class UpdateUserController implements Initializable {
 
     public void setController(MenuPageController controller){
         this.controller=controller;
-        txtIdUser.setText(String.valueOf(controller.u.getIdUser()));
         txtNamaUser.setText(String.valueOf(controller.u.getNama()));
         txtUsername.setText(String.valueOf(controller.u.getUsername()));
         txtPassword.setText(String.valueOf(controller.u.getPassword()));
@@ -61,6 +59,6 @@ public class UpdateUserController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtIdUser.setDisable(true);
+
     }
 }

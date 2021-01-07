@@ -21,8 +21,6 @@ public class UpdateSparePartController implements Initializable {
 
 
     @FXML
-    private TextField txtIdSparePart;
-    @FXML
     private TextField txtNamaSparePart;
     @FXML
     private TextField txtHargaBeli;
@@ -41,7 +39,6 @@ public class UpdateSparePartController implements Initializable {
 
     public void setController(SparePartPageController controller) {
         this.controller = controller;
-        txtIdSparePart.setText(String.valueOf(controller.s.getIdSparepart()));
         txtNamaSparePart.setText(String.valueOf(controller.s.getNamaSparepart()));
         txtHargaJual.setText(String.valueOf(controller.s.getHargaJual()));
         txtHargaBeli.setText(String.valueOf(controller.s.getHargaBeli()));
@@ -65,6 +62,6 @@ public class UpdateSparePartController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtIdSparePart.setDisable(true);
+
     }
 }

@@ -18,8 +18,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class UpdateReparasiController implements Initializable {
-    @FXML
-    private TextField txtIdReparasi;
+
     @FXML
     private TextField txtJenisReparasi;
     @FXML
@@ -37,7 +36,6 @@ public class UpdateReparasiController implements Initializable {
 
     public void setController(MenuPageController controller){
         this.controller=controller;
-        txtIdReparasi.setText(String.valueOf(controller.r.getIdReparasi()));
         txtJenisReparasi.setText(String.valueOf(controller.r.getJenisreparasi()));
         txtTglReparasi.setText(String.valueOf(controller.r.getTglreparasi()));
         UserDaoImpl uDao = new UserDaoImpl();
@@ -62,7 +60,6 @@ public class UpdateReparasiController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtIdReparasi.setDisable(true);
 
 
     }
