@@ -261,20 +261,6 @@ public class MenuPageController implements Initializable {
         StagetoAdd.show();
     }
 
-    @FXML
-    private void ActionHapusUser(ActionEvent actionEvent) {
-        User selected;
-        selected = (User) TbDataUser.getSelectionModel().getSelectedItem();
-        System.out.println(selected);
-
-        UserDaoImpl dao = new UserDaoImpl();
-        int result = dao.deleteData(selected);
-        if(result!=0){
-            System.out.println("Delete Berhasil");
-        }
-        ObservableList<User> uList = (ObservableList<User>) dao.fetchAll();
-        TbDataUser.setItems(uList);
-    }
 
     @FXML
     private void ActionUpdateUser(ActionEvent actionEvent) throws IOException {

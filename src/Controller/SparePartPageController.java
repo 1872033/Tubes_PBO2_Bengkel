@@ -56,13 +56,13 @@ public class SparePartPageController implements Initializable {
         return uDAO;
     }
 
-    ObservableList<SparePart> dList;
+    ObservableList<SparePart> spList;
     public ObservableList<SparePart> getSparePart(){
-        if (dList==null) {
-            dList= FXCollections.observableArrayList();
-            dList.addAll(getSparePartDAO().fetchAll());
+        if (spList==null) {
+            spList= FXCollections.observableArrayList();
+            spList.addAll(getSparePartDAO().fetchAll());
         }
-        return dList;
+        return spList;
     }
 
 
@@ -78,20 +78,6 @@ public class SparePartPageController implements Initializable {
         StagetoAdd.show();
     }
 
-    @FXML
-    private void ActionHapusSparePart(ActionEvent actionEvent) {
-        SparePart selected;
-        selected = (SparePart) TbSparePart.getSelectionModel().getSelectedItem();
-        System.out.println(selected);
-
-        SparepartDaoImpl dao = new SparepartDaoImpl();
-        int result = dao.deleteData(selected);
-        if(result!=0){
-            System.out.println("Delete Berhasil");
-        }
-        ObservableList<SparePart> uList = (ObservableList<SparePart>) dao.fetchAll();
-        TbSparePart.setItems(uList);
-    }
 
     @FXML
     private void ActionUpdateSparePart(ActionEvent actionEvent) throws IOException {

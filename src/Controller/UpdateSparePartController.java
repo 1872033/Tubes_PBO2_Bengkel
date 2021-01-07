@@ -65,8 +65,8 @@ public class UpdateSparePartController implements Initializable {
 
         sDAO.editData(sparePart);
         controller.getSparePartDAO().editData(sparePart);
-        controller.dList.clear();
-        controller.dList.addAll(controller.getSparePartDAO().fetchAll());
+        controller.spList.clear();
+        controller.spList.addAll(controller.getSparePartDAO().fetchAll());
     }
 
     @FXML

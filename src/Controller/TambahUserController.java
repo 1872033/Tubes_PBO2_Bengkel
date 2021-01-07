@@ -23,6 +23,9 @@ public class TambahUserController {
     private Button btnCancel;
     private MenuPageController controller;
 
+    public void setController(MenuPageController controller) {
+        this.controller = controller;
+    }
 
     @FXML
     private void actionTambahUser(ActionEvent actionEvent) {

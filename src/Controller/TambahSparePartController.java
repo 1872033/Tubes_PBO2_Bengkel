@@ -38,6 +38,9 @@ public class TambahSparePartController implements Initializable {
     private ComboBox<Reparasi> cmbBoxIdRep;
     private SparePartPageController controller;
 
+    public void setController(SparePartPageController controller) {
+        this.controller = controller;
+    }
 
     @FXML
     private void actionCancelSparePart(ActionEvent actionEvent) throws IOException {
@@ -63,8 +66,8 @@ public class TambahSparePartController implements Initializable {
         reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
 
         controller.getSparePartDAO().addData(sparePart);
-        controller.dList.clear();
-        controller.dList.addAll(controller.getSparePartDAO().fetchAll());
+        controller.spList.clear();
+        controller.spList.addAll(controller.getSparePartDAO().fetchAll());
 
     }
 

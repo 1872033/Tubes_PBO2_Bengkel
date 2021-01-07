@@ -29,11 +29,6 @@
                         <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                     </HBox.margin>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#ActionHapusSparePart" prefHeight="26.0" prefWidth="26.0" text="-">
-                    <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
-                    </HBox.margin>
-                </Button>
                 <Button mnemonicParsing="false" onAction="#ActionUpdateSparePart" text="Update">
                     <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
