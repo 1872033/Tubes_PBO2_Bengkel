@@ -31,10 +31,9 @@ public class TambahUserController {
         user.setUsername(txtUsername.getText());
         user.setPassword(txtPassword.getText());
 
-        controller.getuDAO().addData(user);
-        controller.dList.clear();
-        controller.dList.addAll(controller.getUserDAO().fetchAll());
-
+        controller.getUserDAO().addData(user);
+        controller.uList.clear();
+        controller.uList.addAll(controller.getUserDAO().fetchAll());
     }
 
     @FXML

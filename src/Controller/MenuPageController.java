@@ -100,8 +100,21 @@ public class MenuPageController implements Initializable {
     }
 
 
-    private UserDaoImpl uDAO = new UserDaoImpl();
-    private ObservableList<User> dList = (ObservableList<User>) uDAO.fetchAll();
+    public UserDaoImpl uDAO;
+    public ObservableList<User> uList ;
+    public ObservableList<User> getUser(){
+        if (uList==null) {
+            uList=FXCollections.observableArrayList();
+            uList.addAll(getUserDAO().fetchAll());
+        }
+        return uList;
+    }
+    public UserDaoImpl getUserDAO(){
+        if (uDAO==null) {
+            uDAO=new UserDaoImpl();
+        }
+        return uDAO;
+    }
 
 
 
@@ -147,7 +160,7 @@ public class MenuPageController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         StagetoAdd = new Stage();
 
-        TbDataUser.setItems(dList);
+        TbDataUser.setItems(getUser());
         ColNama.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNama()));
         ColUsername.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getUsername()));
         ColPasswd.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getPassword()));

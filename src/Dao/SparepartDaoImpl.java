@@ -19,7 +19,7 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
     public List<SparePart> fetchAll() {
         ObservableList<SparePart> spareParts = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT * FROM Sparepart";
+            String query = "SELECT * FROM sparepart";
 
             PreparedStatement ps;
             ps= MySQLConnection.createConnection().prepareStatement(query);
@@ -51,7 +51,7 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
     public int addData(SparePart object) {
         int result =0;
         try  {
-            String query = "INSERT INTO sparepart(nama,hargabeli,hargajual,stok) VALUES (?, ?,?,?)";
+            String query = "INSERT INTO sparepart(Nama,HargaBeli,HargaJual,Stok) VALUES (?, ?,?,?)";
             PreparedStatement ps;
             ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getNamaSparepart());
@@ -74,7 +74,7 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
     public int editData(SparePart object) {
         int result = 0;
         try {
-            String query = "UPDATE sparepart SET nama=? ,hargabeli=?,hargajual=?,stok=? WHERE idSparepart=?";
+            String query = "UPDATE sparepart SET Nama=? ,HargaBeli=?,HargaJual=?,Stok=? WHERE idSparepart=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getNamaSparepart());
             ps.setInt(2, object.getHargaBeli());
@@ -95,7 +95,7 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
     public int deleteData(SparePart object) {
         int result = 0;
         try  {
-            String query = "DELETE FROM Sparepart WHERE idSparepart=?";
+            String query = "DELETE FROM Sparepart WHERE idSparePart=?";
             Connection connection=MySQLConnection.createConnection();
             connection.setAutoCommit(false);
             PreparedStatement ps = connection.prepareStatement(query);
