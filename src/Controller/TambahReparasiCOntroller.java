@@ -18,32 +18,32 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class TambahReparasiCOntroller implements Initializable {
-    @FXML
-    private TextField txtIdReparasi;
+
     @FXML
     private TextField txtTglReparasi;
     @FXML
     private TextField txtJenisReparasi;
     @FXML
-    private ComboBox CmbBoxIdKendaraan;
-    @FXML
-    private ComboBox CmbBoxIdUser;
+    private ComboBox<User> CmbBoxIdUser;
     @FXML
     private Button btnCancel;
+    private MenuPageController controller;
+
+    public void setController(MenuPageController controller) {
+        this.controller = controller;
+    }
 
     @FXML
     private void actionTambahReparasi(ActionEvent actionEvent) {
         Reparasi reparasi = new Reparasi();
-        reparasi.setIdReparasi(reparasi.getIdReparasi());
-        reparasi.setTglreparasi(reparasi.getTglreparasi());
-        reparasi.setJenisreparasi(reparasi.getJenisreparasi());
-
-        Kendaraan kendaraan = new Kendaraan();
-        kendaraan.setIdKendaraan(CmbBoxIdKendaraan.getValue());
-
+        reparasi.setJenisreparasi(txtJenisReparasi.getText());
+        reparasi.setTglreparasi(txtTglReparasi.getText());
         User user = new User();
-        user.setIdUser(CmbBoxIdUser.getValue());
-
+        user.setIdUser(CmbBoxIdUser.getValue().getIdUser());
+        reparasi.setIdPemilik(user);
+        controller.getReparasiDAO().addData(reparasi);
+        controller.rList.clear();
+        controller.rList.addAll(controller.getReparasiDAO().fetchAll());
     }
 
     @FXML
@@ -56,7 +56,6 @@ public class TambahReparasiCOntroller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         KendaraanDaoImpl cDAO = new KendaraanDaoImpl();
         ObservableList<Kendaraan> kList = (ObservableList<Kendaraan>) cDAO.fetchAll();
-        CmbBoxIdKendaraan.setItems(kList);
 
         UserDaoImpl uDAO = new UserDaoImpl();
         ObservableList<User> uList = (ObservableList<User>) uDAO.fetchAll();

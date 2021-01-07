@@ -6,10 +6,10 @@ public class SparePart {
     private int hargaBeli;
     private int hargaJual;
     private int stok;
-    private int idRep;
+    private Reparasi idRep;
 
 
-    public SparePart(int idSparepart, String namaSparepart, int hargaBeli, int hargaJual, int stok, int idRep){
+    public SparePart(int idSparepart, String namaSparepart, int hargaBeli, int hargaJual, int stok, Reparasi idRep){
         this.setIdSparepart(idSparepart);
         this.setNamaSparepart(namaSparepart);
         this.setHargaBeli(hargaBeli);
@@ -18,9 +18,14 @@ public class SparePart {
         this.setIdRep(idRep);
 
     }
-    public int getIdRep() { return idRep; }
 
-    public void setIdRep(int idRep) { this.idRep = idRep; }
+    public SparePart() {
+
+    }
+
+    public Reparasi getIdRep() { return idRep; }
+
+    public void setIdRep(Reparasi idRep) { this.idRep = idRep; }
 
     public int getIdSparepart() {
         return idSparepart;

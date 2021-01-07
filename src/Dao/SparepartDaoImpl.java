@@ -1,5 +1,6 @@
 package Dao;
 
+import Entity.Reparasi;
 import Entity.SparePart;
 import Utility.DaoService;
 import Utility.MySQLConnection;
@@ -29,8 +30,10 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
                 int hargabeli= rs.getInt("HargaBeli");
                 int hargajual= rs.getInt("HargaJual");
                 int stok= rs.getInt("Stok");
-                int idRep= rs.getInt("Reparasi_idReparasi");
-                SparePart sp = new SparePart(idSparepart,nama,hargabeli,hargajual,stok,idRep);
+                Reparasi rep = new Reparasi();
+                rep.setIdReparasi(rs.getInt("Reparasi_idReparasi"));
+
+                SparePart sp = new SparePart(idSparepart,nama,hargabeli,hargajual,stok,rep);
                 spareParts.add(sp);
             }
         }

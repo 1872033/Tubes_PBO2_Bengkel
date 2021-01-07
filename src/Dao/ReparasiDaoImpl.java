@@ -1,6 +1,8 @@
 package Dao;
 
+import Entity.Kendaraan;
 import Entity.Reparasi;
+import Entity.User;
 import Utility.DaoService;
 import Utility.MySQLConnection;
 import javafx.collections.FXCollections;
@@ -30,11 +32,13 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
                 int idReparasi= rs.getInt("idReparasi");
                 String tglreparasi=rs.getString("tglreparasi");
                 String jenisreparasi=rs.getString("jenisReparasi");
-                String idKendaraan=rs.getString("idKen");
-                String namaPem=rs.getString("namaPemilik");
-                String idPem=rs.getString("idPemilik");
+                Kendaraan ken = new Kendaraan();
+                ken.setIdKendaraan(rs.getInt("idKen"));
 
-                Reparasi r = new Reparasi(idReparasi,tglreparasi,jenisreparasi,idKendaraan,namaPem,idPem);
+                User us =new User();
+                us.setIdUser(rs.getInt("idPemilik"));
+
+                Reparasi r = new Reparasi(idReparasi,tglreparasi,jenisreparasi,ken,us);
                 reparasis.add(r);
             }
         }
@@ -52,12 +56,12 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
     public int addData(Reparasi object) {
         int result =0;
         try  {
-            String query = "INSERT INTO reparasi(tglreparasi,jenisreparasi) VALUES (?, ?)";
+            String query = "INSERT INTO reparasi(Tglreparasi,JenisReparasi,User_idUser) VALUES (?, ?,?)";
             PreparedStatement ps;
             ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getTglreparasi());
             ps.setString(2, object.getJenisreparasi());
-
+            ps.setInt(3, object.getIdPemilik().getIdUser());
             result=ps.executeUpdate();
         }
         catch (SQLException throwables) {

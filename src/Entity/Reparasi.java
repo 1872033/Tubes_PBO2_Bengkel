@@ -1,45 +1,38 @@
 package Entity;
 
-import java.util.Date;
-
 public class Reparasi {
     private int idReparasi;
     private String tglreparasi;
     private String jenisreparasi;
-    private String idKendaraan;
-    private String NamaPemilik;
-    private String idPemilik;
+    private Kendaraan idKendaraan;
+    private User idPemilik;
 
-    public String getIdPemilik() {
+    public Reparasi() {
+
+    }
+
+    public User getIdPemilik() {
         return idPemilik;
     }
 
-    public void setIdPemilik(String idPemilik) {
+    public void setIdPemilik(User idPemilik) {
         this.idPemilik = idPemilik;
     }
 
-    public String getIdKendaraan() {
+    public Kendaraan getIdKendaraan() {
         return idKendaraan;
     }
 
-    public void setIdKendaraan(String idKendaraan) {
+    public void setIdKendaraan(Kendaraan idKendaraan) {
         this.idKendaraan = idKendaraan;
     }
 
-    public String getNamaPemilik() {
-        return NamaPemilik;
-    }
 
-    public void setNamaPemilik(String namaPemilik) {
-        NamaPemilik = namaPemilik;
-    }
-
-    public Reparasi(int idReparasi, String tglreparasi, String jenisreparasi, String idKendaraan, String NamaPemilik,String idPemilik){
+    public Reparasi(int idReparasi, String tglreparasi, String jenisreparasi, Kendaraan idKendaraan ,User idPemilik){
         this.setIdReparasi(idReparasi);
         this.setTglreparasi(tglreparasi);
         this.setJenisreparasi(jenisreparasi);
         this.setIdKendaraan(idKendaraan);
-        this.setNamaPemilik(NamaPemilik);
         this.setIdPemilik(idPemilik);
 
     }

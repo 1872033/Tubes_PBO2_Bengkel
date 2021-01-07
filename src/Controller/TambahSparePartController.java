@@ -36,7 +36,7 @@ public class TambahSparePartController implements Initializable {
     @FXML
     private Button btnCancel;
     @FXML
-    private ComboBox cmbBoxIdRep;
+    private ComboBox<Reparasi> cmbBoxIdRep;
 
     @FXML
     private void actionCancelSparePart(ActionEvent actionEvent) throws IOException {
@@ -60,7 +60,7 @@ public class TambahSparePartController implements Initializable {
         sparePart.setStok(sparePart.getStok());
 
         Reparasi reparasi = new Reparasi();
-        reparasi.setIdReparasi(cmbBoxIdRep.getValue());
+        reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
 
     }
 

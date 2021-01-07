@@ -1,5 +1,6 @@
 package Controller;
 
+import Dao.KendaraanDaoImpl;
 import Dao.UserDaoImpl;
 import Entity.Kendaraan;
 import Entity.User;
@@ -9,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -25,23 +27,29 @@ public class TambahKendaraanController implements Initializable {
     @FXML
     private TextField txtNoPlat;
     @FXML
-    private ComboBox CmbBoxUser;
+    private ComboBox<User> CmbBoxUser;
     @FXML
     private Button btnCancel;
+
+    private MenuPageController controller;
+
+
+    public void setController(MenuPageController controller) {
+        this.controller = controller;
+    }
 
     @FXML
     private void actionTambahKendaraan(ActionEvent actionEvent) {
         Kendaraan kendaraan = new Kendaraan();
-        kendaraan.setIdKendaraan(kendaraan.getIdKendaraan());
-        kendaraan.setJeniskendaraan(kendaraan.getJeniskendaraan());
-        kendaraan.setNostnk(kendaraan.getNostnk());
-        kendaraan.setNoPlat(kendaraan.getNoPlat());
-
+        kendaraan.setJeniskendaraan(txtJenisKendaraan.getText());
+        kendaraan.setNostnk(txtNoSTNK.getText());
+        kendaraan.setNoPlat(txtNoPlat.getText());
         User user = new User();
-        user.setIdUser(CmbBoxUser.getValue());
-
-
-
+        user.setIdUser(CmbBoxUser.getValue().getIdUser());
+        kendaraan.setIdUser(user);
+        controller.getKendaraanDAO().addData(kendaraan);
+        controller.kList.clear();
+        controller.kList.addAll(controller.getKendaraanDAO().fetchAll());
     }
 
     @FXML

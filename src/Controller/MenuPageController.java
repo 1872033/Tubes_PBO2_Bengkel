@@ -9,6 +9,7 @@ import Entity.Reparasi;
 import Entity.User;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,7 +33,7 @@ public class MenuPageController implements Initializable {
 
 
     @FXML
-    private TableView<Reparasi> TbRiwayatReparasi;
+    public TableView<Reparasi> TbRiwayatReparasi;
     @FXML
     private TableColumn<Reparasi,Integer> ColidReparasi;
     @FXML
@@ -44,7 +45,7 @@ public class MenuPageController implements Initializable {
     @FXML
     private TableColumn<Reparasi,String> ColJenisReparasi;
     @FXML
-    private TableView<Kendaraan> TbDataKendaraan;
+    public TableView<Kendaraan> TbDataKendaraan;
     @FXML
     private TableColumn<Kendaraan,Integer> ColidKendaraanDK;
     @FXML
@@ -56,7 +57,7 @@ public class MenuPageController implements Initializable {
     @FXML
     private TableColumn<Kendaraan,String> ColNoSTNK;
     @FXML
-    private TableView<User> TbDataUser;
+    public TableView<User> TbDataUser;
     @FXML
     private TableColumn<User,String> ColNama;
     @FXML
@@ -79,6 +80,45 @@ public class MenuPageController implements Initializable {
         TbRiwayatReparasi.refresh();
     }
 
+    private KendaraanDaoImpl kDAO;
+    public KendaraanDaoImpl getKendaraanDAO(){
+        if (kDAO==null) {
+            kDAO=new KendaraanDaoImpl();
+        }
+        return kDAO;
+    }
+
+    public ObservableList<Kendaraan> kList;
+    public ObservableList<Kendaraan> getKendaraan(){
+        if (kList==null) {
+            kList=FXCollections.observableArrayList();
+            kList.addAll(getKendaraanDAO().fetchAll());
+        }
+        return kList;
+    }
+
+
+    private UserDaoImpl uDAO = new UserDaoImpl();
+    private ObservableList<User> dList = (ObservableList<User>) uDAO.fetchAll();
+
+
+
+    public ReparasiDaoImpl rDAO;
+    public ObservableList<Reparasi> rList;
+    public ObservableList<Reparasi> getReparasi(){
+        if (rList==null) {
+            rList=FXCollections.observableArrayList();
+            rList.addAll(getReparasiDAO().fetchAll());
+        }
+        return rList;
+    }
+    public ReparasiDaoImpl getReparasiDAO(){
+        if (rDAO==null) {
+            rDAO=new ReparasiDaoImpl();
+        }
+        return rDAO;
+    }
+
 
 
     @FXML
@@ -87,25 +127,20 @@ public class MenuPageController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         StagetoAdd = new Stage();
-        UserDaoImpl uDAO = new UserDaoImpl();
-        ObservableList<User> dList = (ObservableList<User>) uDAO.fetchAll();
+
         TbDataUser.setItems(dList);
         ColNama.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getNama()));
         ColUsername.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getUsername()));
         ColPasswd.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getPassword()));
 
-        ReparasiDaoImpl rDAO = new ReparasiDaoImpl();
-        ObservableList<Reparasi> rList = (ObservableList<Reparasi>) rDAO.fetchAll();
-        TbRiwayatReparasi.setItems(rList);
+        TbRiwayatReparasi.setItems(getReparasi());
         ColidReparasi.setCellValueFactory(data-> new SimpleObjectProperty<>(data.getValue().getIdReparasi()));
         ColidKendaraanR.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdKendaraan()));
         ColidNamaPemilikR.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdPemilik()));
         ColTanggal.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getTglreparasi()));
         ColJenisReparasi.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getJenisreparasi()));
 
-        KendaraanDaoImpl kDAO = new KendaraanDaoImpl();
-        ObservableList<Kendaraan> kList = (ObservableList<Kendaraan>) kDAO.fetchAll();
-        TbDataKendaraan.setItems(kList);
+        TbDataKendaraan.setItems(getKendaraan());
         ColidKendaraanDK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdKendaraan()));
         ColJenisKendaraan.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getJeniskendaraan()));
         ColNamaPemilikDK.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdUser()));
@@ -119,6 +154,8 @@ public class MenuPageController implements Initializable {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("../View/TambahReparasi.fxml"));
         Parent root = loader.load();
+        TambahReparasiCOntroller tambahReparasiCOntroller= loader.getController();
+        tambahReparasiCOntroller.setController(this);
 
         Scene new_scene = new Scene(root);
         StagetoAdd.setScene(new_scene);
@@ -162,11 +199,13 @@ public class MenuPageController implements Initializable {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("../View/TambahKendaraan.fxml"));
         Parent root = loader.load();
-
+        TambahKendaraanController tambahKendaraanController= loader.getController();
+        tambahKendaraanController.setController(this);
         Scene new_scene = new Scene(root);
         StagetoAdd.setScene(new_scene);
         StagetoAdd.setTitle("Tambah Kendaraan");
         StagetoAdd.show();
+
     }
 
     @FXML

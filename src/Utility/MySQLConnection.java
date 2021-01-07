@@ -11,7 +11,6 @@ public class MySQLConnection {
     public static Connection createConnection() throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        connection.setAutoCommit(false);
         return connection;
     }
 

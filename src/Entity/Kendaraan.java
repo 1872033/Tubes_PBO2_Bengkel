@@ -5,31 +5,25 @@ public class Kendaraan {
     private String jeniskendaraan;
     private String nostnk;
     private  String noPlat;
-    private String NamaUser;
-    private String idUser;
+    private User idUser;
 
-    public String getIdUser() {
+    public Kendaraan() {
+
+    }
+
+    public User getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(String idUser) {
+    public void setIdUser(User idUser) {
         this.idUser = idUser;
     }
 
-    public String getNamaUser() {
-        return NamaUser;
-    }
-
-    public void setNamaUser(String namaUser) {
-        NamaUser = namaUser;
-    }
-
-    public Kendaraan(int idKendaraan, String jeniskendaraan, String nostnk, String noPlat, String NamaUser,String idUser){
+    public Kendaraan(int idKendaraan, String jeniskendaraan, String nostnk, String noPlat,User idUser){
         this.setIdKendaraan(idKendaraan);
         this.setJeniskendaraan(jeniskendaraan);
         this.setNostnk(nostnk);
         this.setNoPlat(noPlat);
-        this.setNamaUser(NamaUser);
         this.setIdUser(idUser);
 
     }
@@ -67,7 +61,7 @@ public class Kendaraan {
     @Override
     public String toString() {
         return
-                "id = " + idKendaraan +
-                " | jenis = " + jeniskendaraan;
+                "id = " + idKendaraan
+                ;
     }
 }

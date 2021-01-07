@@ -28,13 +28,15 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
             ps= MySQLConnection.createConnection().prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
+
                 int idKendaraan= rs.getInt("idKendaraan");
                 String jenisKendaraan=rs.getString("JenisKendaraan");
                 String NoSTNK=rs.getString("Nostnk");
                 String NoPlat=rs.getString("Noplat");
-                String Nama=rs.getString("nama");
-                String Id=rs.getString("id");
-                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,Nama,Id);
+                User u =new User();
+                u.setIdUser(rs.getInt("id"));
+
+                Kendaraan k = new Kendaraan(idKendaraan,jenisKendaraan,NoSTNK,NoPlat,u);
                 kendaraans.add(k);
             }
         }
@@ -52,13 +54,16 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public int addData(Kendaraan object)  {
         int result =0;
         try  {
-            String query = "INSERT INTO kendaraan(jeniskendaraan,nostnk,noplat) VALUES (?, ?, ?)";
+            String query = "INSERT INTO kendaraan(JenisKendaraan,NoSTNK,NoPlat,User_idUser) VALUES (?, ?, ?, ?)";
             PreparedStatement ps;
             ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getJeniskendaraan());
             ps.setString(2, object.getNostnk());
             ps.setString(3, object.getNoPlat());
+            ps.setInt(4, object.getIdUser().getIdUser());
+
             result=ps.executeUpdate();
+
         }
         catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -78,7 +83,7 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
             ps.setString(1, object.getJeniskendaraan());
             ps.setString(2, object.getNostnk());
             ps.setString(3, object.getNoPlat());
-            ps.setInt(4, Integer.parseInt(object.getIdUser()));
+            ps.setInt(4, object.getIdUser().getIdUser());
             ps.setInt(5, object.getIdKendaraan());
 
 
