@@ -2,9 +2,11 @@ package Controller;
 
 import Dao.KendaraanDaoImpl;
 import Dao.ReparasiDaoImpl;
+import Dao.SparepartDaoImpl;
 import Entity.Kendaraan;
 import Entity.Reparasi;
 import Entity.SparePart;
+import Entity.User;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,7 +31,7 @@ public class UpdateSparePartController implements Initializable {
     @FXML
     private TextField txtStok;
     @FXML
-    private ComboBox cmbBoxIdRep;
+    private ComboBox<Reparasi> cmbBoxIdRep;
     @FXML
     private Button btnCancel;
 
@@ -52,6 +54,19 @@ public class UpdateSparePartController implements Initializable {
 
     @FXML
     private void actionUpdateSparePart(ActionEvent actionEvent) {
+        SparepartDaoImpl sDAO = new SparepartDaoImpl();
+        sparePart.setNamaSparepart(txtNamaSparePart.getText().trim());
+        sparePart.setHargaBeli(Integer.parseInt(txtHargaBeli.getText().trim()));
+        sparePart.setHargaJual(Integer.parseInt(txtHargaJual.getText().trim()));
+        sparePart.setStok(Integer.parseInt(txtStok.getText().trim()));
+
+        Reparasi reparasi = new Reparasi();
+        reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
+
+        sDAO.editData(sparePart);
+        controller.getSparePartDAO().editData(sparePart);
+        controller.dList.clear();
+        controller.dList.addAll(controller.getSparePartDAO().fetchAll());
     }
 
     @FXML

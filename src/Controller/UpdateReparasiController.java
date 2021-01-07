@@ -1,6 +1,7 @@
 package Controller;
 
 import Dao.KendaraanDaoImpl;
+import Dao.ReparasiDaoImpl;
 import Dao.UserDaoImpl;
 import Entity.Kendaraan;
 import Entity.Reparasi;
@@ -22,9 +23,9 @@ public class UpdateReparasiController implements Initializable {
     @FXML
     private TextField txtJenisReparasi;
     @FXML
-    private ComboBox CmbBoxIdKendaraan;
+    private ComboBox<Kendaraan> CmbBoxIdKendaraan;
     @FXML
-    private ComboBox CmbBoxIdUser;
+    private ComboBox<User> CmbBoxIdUser;
     @FXML
     private TextField txtTglReparasi;
     @FXML
@@ -50,6 +51,21 @@ public class UpdateReparasiController implements Initializable {
 
     @FXML
     private void actionUpdateReparasi(ActionEvent actionEvent) {
+        ReparasiDaoImpl rDAO = new ReparasiDaoImpl();
+        reparasi.setTglreparasi(txtTglReparasi.getText().trim());
+        reparasi.setJenisreparasi(txtJenisReparasi.getText().trim());
+        User user = new User();
+        user.setIdUser(CmbBoxIdUser.getValue().getIdUser());
+        reparasi.setIdPemilik(user);
+
+        Kendaraan kendaraan = new Kendaraan();
+        kendaraan.setIdKendaraan(CmbBoxIdKendaraan.getValue().getIdKendaraan());
+        reparasi.setIdKendaraan(kendaraan);
+
+        rDAO.editData(reparasi);
+        controller.getKendaraanDAO().editData(kendaraan);
+        controller.kList.clear();
+        controller.kList.addAll(controller.getKendaraanDAO().fetchAll());
     }
 
     @FXML

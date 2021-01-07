@@ -1,11 +1,14 @@
 package Controller;
 
 import Bengkel_Anthony_Ray_Ronaldo.Main;
+import Dao.KendaraanDaoImpl;
 import Dao.SparepartDaoImpl;
+import Entity.Kendaraan;
 import Entity.Reparasi;
 import Entity.SparePart;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,6 +47,23 @@ public class SparePartPageController implements Initializable {
     private Button btnExit;
 
     public SparePart s;
+
+    SparepartDaoImpl uDAO ;
+    public SparepartDaoImpl getSparePartDAO(){
+        if (uDAO==null) {
+            uDAO=new SparepartDaoImpl();
+        }
+        return uDAO;
+    }
+
+    ObservableList<SparePart> dList;
+    public ObservableList<SparePart> getSparePart(){
+        if (dList==null) {
+            dList= FXCollections.observableArrayList();
+            dList.addAll(getSparePartDAO().fetchAll());
+        }
+        return dList;
+    }
 
 
     @FXML
@@ -106,9 +126,8 @@ public class SparePartPageController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         StagetoAdd = new Stage();
-        SparepartDaoImpl uDAO = new SparepartDaoImpl();
-        ObservableList<SparePart> dList = (ObservableList<SparePart>) uDAO.fetchAll();
-        TbSparePart.setItems(dList);
+
+        TbSparePart.setItems(getSparePart());
         ColidSparePart.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getIdSparepart()));
         ColNamaSparePart.setCellValueFactory(data-> new SimpleStringProperty(data.getValue().getNamaSparepart()));
         ColHargaBeli.setCellValueFactory(data-> new SimpleObjectProperty(data.getValue().getHargaBeli()));

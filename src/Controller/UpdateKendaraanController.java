@@ -54,6 +54,7 @@ public class UpdateKendaraanController implements Initializable {
         User user = new User();
         user.setIdUser(CmbBoxUser.getValue().getIdUser());
         kendaraan.setIdUser(user);
+        kDAO.editData(kendaraan);
 
         controller.getKendaraanDAO().editData(kendaraan);
         controller.kList.clear();

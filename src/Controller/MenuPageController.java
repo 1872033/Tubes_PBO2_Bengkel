@@ -131,22 +131,6 @@ public class MenuPageController implements Initializable {
         return rDAO;
     }
 
-    private SparepartDaoImpl spDAO;
-    public SparepartDaoImpl getSparepartDAO(){
-        if (spDAO==null) {
-            spDAO=new SparepartDaoImpl();
-        }
-        return spDAO;
-    }
-
-    public ObservableList<SparePart> spList;
-    public ObservableList<SparePart> getSparepart(){
-        if (spList==null) {
-            spList=FXCollections.observableArrayList();
-            spList.addAll(getSparepartDAO().fetchAll());
-        }
-        return spList;
-    }
 
     @FXML
     private Button LogOutButton;

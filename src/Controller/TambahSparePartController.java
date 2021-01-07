@@ -36,7 +36,7 @@ public class TambahSparePartController implements Initializable {
     private Button btnCancel;
     @FXML
     private ComboBox<Reparasi> cmbBoxIdRep;
-    private MenuPageController controller;
+    private SparePartPageController controller;
 
 
     @FXML
@@ -62,9 +62,9 @@ public class TambahSparePartController implements Initializable {
         Reparasi reparasi = new Reparasi();
         reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
 
-        controller.getSparepartDAO().addData(sparePart);
-        controller.spList.clear();
-        controller.spList.addAll(controller.getSparepartDAO().fetchAll());
+        controller.getSparePartDAO().addData(sparePart);
+        controller.dList.clear();
+        controller.dList.addAll(controller.getSparePartDAO().fetchAll());
 
     }
 
