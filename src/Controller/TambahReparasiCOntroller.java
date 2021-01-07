@@ -28,6 +28,8 @@ public class TambahReparasiCOntroller implements Initializable {
     @FXML
     private Button btnCancel;
     private MenuPageController controller;
+    @FXML
+    private ComboBox<Kendaraan> CmbBoxIdKendaraan;
 
     public void setController(MenuPageController controller) {
         this.controller = controller;
@@ -41,6 +43,10 @@ public class TambahReparasiCOntroller implements Initializable {
         User user = new User();
         user.setIdUser(CmbBoxIdUser.getValue().getIdUser());
         reparasi.setIdPemilik(user);
+
+        Kendaraan kendaraan = new Kendaraan();
+        kendaraan.setIdKendaraan(CmbBoxIdKendaraan.getValue().getIdKendaraan());
+        reparasi.setIdKendaraan(kendaraan);
         controller.getReparasiDAO().addData(reparasi);
         controller.rList.clear();
         controller.rList.addAll(controller.getReparasiDAO().fetchAll());
@@ -56,6 +62,7 @@ public class TambahReparasiCOntroller implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         KendaraanDaoImpl cDAO = new KendaraanDaoImpl();
         ObservableList<Kendaraan> kList = (ObservableList<Kendaraan>) cDAO.fetchAll();
+        CmbBoxIdKendaraan.setItems(kList);
 
         UserDaoImpl uDAO = new UserDaoImpl();
         ObservableList<User> uList = (ObservableList<User>) uDAO.fetchAll();

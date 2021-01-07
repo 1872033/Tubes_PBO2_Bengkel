@@ -99,7 +99,6 @@ public class MenuPageController implements Initializable {
         return kList;
     }
 
-
     public UserDaoImpl uDAO;
     public ObservableList<User> uList ;
     public ObservableList<User> getUser(){
@@ -115,8 +114,6 @@ public class MenuPageController implements Initializable {
         }
         return uDAO;
     }
-
-
 
     public ReparasiDaoImpl rDAO;
     public ObservableList<Reparasi> rList;
@@ -150,8 +147,6 @@ public class MenuPageController implements Initializable {
         }
         return spList;
     }
-
-
 
     @FXML
     private Button LogOutButton;

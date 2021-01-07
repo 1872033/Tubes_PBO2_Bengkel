@@ -78,7 +78,7 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public int editData(Kendaraan object) {
         int result = 0;
         try {
-            String query = "UPDATE kendaraan SET jeniskendaraan=? ,nostnk=? ,noplat=?,User_idUser=? WHERE idKendaraan=?";
+            String query = "UPDATE kendaraan SET JenisKendaraan=? ,NoSTNK=? ,NoPlat=? ,User_idUser=? WHERE idKendaraan=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getJeniskendaraan());
             ps.setString(2, object.getNostnk());

@@ -25,7 +25,7 @@ public class UpdateKendaraanController implements Initializable {
     @FXML
     private TextField txtNoPlat;
     @FXML
-    private ComboBox CmbBoxUser;
+    private ComboBox<User> CmbBoxUser;
     @FXML
     private Button btnCancel;
 
@@ -47,6 +47,17 @@ public class UpdateKendaraanController implements Initializable {
 
     @FXML
     private void actionUpdateKendaraan(ActionEvent actionEvent) {
+        KendaraanDaoImpl kDAO = new KendaraanDaoImpl();
+        kendaraan.setJeniskendaraan(txtJenisKendaraan.getText().trim());
+        kendaraan.setNostnk(txtNoSTNK.getText().trim());
+        kendaraan.setNoPlat(txtNoPlat.getText().trim());
+        User user = new User();
+        user.setIdUser(CmbBoxUser.getValue().getIdUser());
+        kendaraan.setIdUser(user);
+
+        controller.getKendaraanDAO().editData(kendaraan);
+        controller.kList.clear();
+        controller.kList.addAll(controller.getKendaraanDAO().fetchAll());
 
     }
 

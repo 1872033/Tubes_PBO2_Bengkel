@@ -34,7 +34,6 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
                 String jenisreparasi=rs.getString("jenisReparasi");
                 Kendaraan ken = new Kendaraan();
                 ken.setIdKendaraan(rs.getInt("idKen"));
-
                 User us =new User();
                 us.setIdUser(rs.getInt("idPemilik"));
 
@@ -56,12 +55,14 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
     public int addData(Reparasi object) {
         int result =0;
         try  {
-            String query = "INSERT INTO reparasi(Tglreparasi,JenisReparasi,User_idUser) VALUES (?, ?,?)";
+            String query = "INSERT INTO reparasi(TglReparasi,JenisReparasi,User_idUser,Kendaraan_idKendaraan) VALUES (?, ?,?,?)";
             PreparedStatement ps;
             ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getTglreparasi());
             ps.setString(2, object.getJenisreparasi());
             ps.setInt(3, object.getIdPemilik().getIdUser());
+            ps.setInt(4, object.getIdKendaraan().getIdKendaraan());
+
             result=ps.executeUpdate();
         }
         catch (SQLException throwables) {
@@ -77,11 +78,13 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
     public int editData(Reparasi object) {
         int result = 0;
         try {
-            String query = "UPDATE reparasi SET tglreparasi=? ,jenisreparasi=?  WHERE idReparasi=?";
+            String query = "UPDATE reparasi SET TglReparasi=?, JenisReparasi=?, User_idUser=?, Kendaraan_idKendaraan=?  WHERE idReparasi=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1,  object.getTglreparasi());
             ps.setString(2, object.getJenisreparasi());
-            ps.setInt(3, object.getIdReparasi());
+            ps.setInt(3, object.getIdPemilik().getIdUser());
+            ps.setInt(4, object.getIdKendaraan().getIdKendaraan());
+            ps.setInt(5, object.getIdReparasi());
 
 
         } catch (SQLException throwables) {

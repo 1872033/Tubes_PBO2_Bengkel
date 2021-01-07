@@ -48,8 +48,9 @@ public class UpdateUserController implements Initializable {
         user.setUsername(txtUsername.getText().trim());
         user.setPassword(txtPassword.getText().trim());
         uDAO.editData(user);
-        controller.refreshUpdate();
-    }
+        controller.getUserDAO().editData(user);
+        controller.uList.clear();
+        controller.uList.addAll(controller.getUserDAO().fetchAll());    }
 
     @FXML
     private void actionCancelUser(ActionEvent actionEvent) {

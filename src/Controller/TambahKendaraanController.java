@@ -61,6 +61,5 @@ public class TambahKendaraanController implements Initializable {
         UserDaoImpl uDao = new UserDaoImpl();
         ObservableList<User> uList = (ObservableList<User>) uDao.fetchAll();
         CmbBoxUser.setItems(uList);
-
     }
 }

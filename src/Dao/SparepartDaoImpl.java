@@ -51,13 +51,14 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
     public int addData(SparePart object) {
         int result =0;
         try  {
-            String query = "INSERT INTO sparepart(Nama,HargaBeli,HargaJual,Stok) VALUES (?, ?,?,?)";
+            String query = "INSERT INTO sparepart(Nama,HargaBeli,HargaJual,Stok,Reparasi_idReparasi) VALUES (?, ?,?,?,?)";
             PreparedStatement ps;
             ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getNamaSparepart());
             ps.setInt(2, object.getHargaBeli());
             ps.setInt(3, object.getHargaJual());
             ps.setInt(4, object.getStok());
+            ps.setInt(5, object.getIdRep().getIdReparasi());
 
             result=ps.executeUpdate();
         }
@@ -74,13 +75,14 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
     public int editData(SparePart object) {
         int result = 0;
         try {
-            String query = "UPDATE sparepart SET Nama=? ,HargaBeli=?,HargaJual=?,Stok=? WHERE idSparepart=?";
+            String query = "UPDATE sparepart SET Nama=? ,HargaBeli=?,HargaJual=?,Stok=?,Reparasi_idReparasi=? WHERE idSparepart=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getNamaSparepart());
             ps.setInt(2, object.getHargaBeli());
             ps.setInt(3, object.getHargaJual());
             ps.setInt(4, object.getStok());
-            ps.setInt(5, object.getIdSparepart());
+            ps.setInt(5, object.getIdRep().getIdReparasi());
+            ps.setInt(6, object.getIdSparepart());
 
 
         } catch (SQLException throwables) {

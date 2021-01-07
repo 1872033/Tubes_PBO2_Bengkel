@@ -55,9 +55,9 @@ public class TambahSparePartController implements Initializable {
     private void actionTambahSparePart(ActionEvent actionEvent) {
         SparePart sparePart = new SparePart();
         sparePart.setNamaSparepart(txtNamaSparePart.getText());
-        sparePart.setHargaBeli(Integer.valueOf(txtHargaBeli.getText()));
-        sparePart.setHargaJual(Integer.valueOf(txtHargaJual.getText()));
-        sparePart.setStok(Integer.valueOf(txtStok.getText()));
+        sparePart.setHargaBeli(Integer.parseInt(txtHargaBeli.getText()));
+        sparePart.setHargaJual(Integer.parseInt(txtHargaJual.getText()));
+        sparePart.setStok(Integer.parseInt(txtStok.getText()));
 
         Reparasi reparasi = new Reparasi();
         reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
