@@ -83,6 +83,7 @@ public class SparepartDaoImpl implements DaoService<SparePart> {
             ps.setInt(4, object.getStok());
             ps.setInt(5, object.getIdRep().getIdReparasi());
             ps.setInt(6, object.getIdSparepart());
+            result=ps.executeUpdate();
 
 
         } catch (SQLException throwables) {

@@ -43,7 +43,7 @@ public class UserDaoImpl implements DaoService <User> {
     public int addData(User object) {
         int result = 0;
         try {
-            String query = "INSERT INTO user (Nama,Username,Password) VALUES (?, ?, ?)";
+            String query = "INSERT INTO `user` (Nama,Username,Password) VALUES (?, ?, ?)";
             PreparedStatement ps;
             ps = MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getNama());
@@ -69,6 +69,8 @@ public class UserDaoImpl implements DaoService <User> {
             ps.setString(2, object.getUsername());
             ps.setString(3, object.getPassword());
             ps.setInt(4, object.getIdUser());
+            result=ps.executeUpdate();
+
 
 
         } catch (SQLException throwables) {

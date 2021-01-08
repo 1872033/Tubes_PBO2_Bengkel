@@ -47,19 +47,16 @@ public class UpdateKendaraanController implements Initializable {
 
     @FXML
     private void actionUpdateKendaraan(ActionEvent actionEvent) {
-        KendaraanDaoImpl kDAO = new KendaraanDaoImpl();
         kendaraan.setJeniskendaraan(txtJenisKendaraan.getText().trim());
         kendaraan.setNostnk(txtNoSTNK.getText().trim());
         kendaraan.setNoPlat(txtNoPlat.getText().trim());
         User user = new User();
         user.setIdUser(CmbBoxUser.getValue().getIdUser());
         kendaraan.setIdUser(user);
-        kDAO.editData(kendaraan);
 
         controller.getKendaraanDAO().editData(kendaraan);
         controller.kList.clear();
         controller.kList.addAll(controller.getKendaraanDAO().fetchAll());
-
     }
 
     @FXML

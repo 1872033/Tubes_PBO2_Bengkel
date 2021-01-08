@@ -51,9 +51,9 @@ public class UpdateReparasiController implements Initializable {
 
     @FXML
     private void actionUpdateReparasi(ActionEvent actionEvent) {
-        ReparasiDaoImpl rDAO = new ReparasiDaoImpl();
         reparasi.setTglreparasi(txtTglReparasi.getText().trim());
         reparasi.setJenisreparasi(txtJenisReparasi.getText().trim());
+
         User user = new User();
         user.setIdUser(CmbBoxIdUser.getValue().getIdUser());
         reparasi.setIdPemilik(user);
@@ -62,10 +62,9 @@ public class UpdateReparasiController implements Initializable {
         kendaraan.setIdKendaraan(CmbBoxIdKendaraan.getValue().getIdKendaraan());
         reparasi.setIdKendaraan(kendaraan);
 
-        rDAO.editData(reparasi);
-        controller.getKendaraanDAO().editData(kendaraan);
-        controller.kList.clear();
-        controller.kList.addAll(controller.getKendaraanDAO().fetchAll());
+        controller.getReparasiDAO().editData(reparasi);
+        controller.rList.clear();
+        controller.rList.addAll(controller.getReparasiDAO().fetchAll());
     }
 
     @FXML

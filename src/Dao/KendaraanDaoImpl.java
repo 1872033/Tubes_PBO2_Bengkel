@@ -18,11 +18,9 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public List<Kendaraan> fetchAll() {
         ObservableList<Kendaraan> kendaraans = FXCollections.observableArrayList();
         try  {
-            String query = "SELECT Kendaraan.idKendaraan as idKendaraan, Kendaraan.JenisKendaraan as JenisKendaraan , User.Nama as nama, User.idUser as id, Kendaraan.NoPlat as Noplat, Kendaraan.NoSTNK as Nostnk\n" +
-                    "FROM     SparePart INNER JOIN\n" +
-                    "                  Reparasi ON SparePart.Reparasi_idReparasi = Reparasi.idReparasi INNER JOIN\n" +
-                    "                  User ON Reparasi.User_idUser = User.idUser INNER JOIN\n" +
-                    "                  Kendaraan ON User.idUser = Kendaraan.User_idUser";
+            String query = "SELECT idKendaraan as idKendaraan, JenisKendaraan as JenisKendaraan, " +
+                    "User_idUser as id, NoPlat as Noplat, NoSTNK as Nostnk\n" +
+                    "FROM     Kendaraan";
 
             PreparedStatement ps;
             ps= MySQLConnection.createConnection().prepareStatement(query);
@@ -78,15 +76,15 @@ public class KendaraanDaoImpl implements DaoService<Kendaraan> {
     public int editData(Kendaraan object) {
         int result = 0;
         try {
-            String query = "UPDATE kendaraan SET JenisKendaraan=? ,NoSTNK=? ,NoPlat=? ,User_idUser=? WHERE idKendaraan=?";
+            String query = "UPDATE kendaraan k JOIN `user` u ON k.User_idUser = u.idUser " +
+                    "SET k.JenisKendaraan=? ,k.NoSTNK=? ,k.NoPlat=? ,k.User_idUser=? WHERE k.idKendaraan=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1, object.getJeniskendaraan());
             ps.setString(2, object.getNostnk());
             ps.setString(3, object.getNoPlat());
             ps.setInt(4, object.getIdUser().getIdUser());
             ps.setInt(5, object.getIdKendaraan());
-
-
+            result=ps.executeUpdate();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         } catch (ClassNotFoundException e) {

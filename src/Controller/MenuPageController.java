@@ -255,6 +255,9 @@ public class MenuPageController implements Initializable {
         loader.setLocation(Main.class.getResource("../View/TambahUser.fxml"));
         Parent root = loader.load();
 
+        TambahUserController tambahUserController= loader.getController();
+        tambahUserController.setController(this);
+
         Scene new_scene = new Scene(root);
         StagetoAdd.setScene(new_scene);
         StagetoAdd.setTitle("Tambah User");

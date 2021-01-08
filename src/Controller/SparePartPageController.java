@@ -72,6 +72,9 @@ public class SparePartPageController implements Initializable {
         loader.setLocation(Main.class.getResource("../View/TambahSparePart.fxml"));
         Parent root = loader.load();
 
+        TambahSparePartController tambahSparePartController= loader.getController();
+        tambahSparePartController.setController(this);
+
         Scene new_scene = new Scene(root);
         StagetoAdd.setScene(new_scene);
         StagetoAdd.setTitle("Tambah SparePart");

@@ -64,7 +64,7 @@ public class TambahSparePartController implements Initializable {
 
         Reparasi reparasi = new Reparasi();
         reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
-
+        sparePart.setIdRep(reparasi);
         controller.getSparePartDAO().addData(sparePart);
         controller.spList.clear();
         controller.spList.addAll(controller.getSparePartDAO().fetchAll());

@@ -54,7 +54,6 @@ public class UpdateSparePartController implements Initializable {
 
     @FXML
     private void actionUpdateSparePart(ActionEvent actionEvent) {
-        SparepartDaoImpl sDAO = new SparepartDaoImpl();
         sparePart.setNamaSparepart(txtNamaSparePart.getText().trim());
         sparePart.setHargaBeli(Integer.parseInt(txtHargaBeli.getText().trim()));
         sparePart.setHargaJual(Integer.parseInt(txtHargaJual.getText().trim()));
@@ -63,7 +62,6 @@ public class UpdateSparePartController implements Initializable {
         Reparasi reparasi = new Reparasi();
         reparasi.setIdReparasi(cmbBoxIdRep.getValue().getIdReparasi());
 
-        sDAO.editData(sparePart);
         controller.getSparePartDAO().editData(sparePart);
         controller.spList.clear();
         controller.spList.addAll(controller.getSparePartDAO().fetchAll());

@@ -76,14 +76,16 @@ public class ReparasiDaoImpl implements DaoService<Reparasi> {
     public int editData(Reparasi object) {
         int result = 0;
         try {
-            String query = "UPDATE reparasi SET TglReparasi=?, JenisReparasi=?, User_idUser=?, Kendaraan_idKendaraan=?  WHERE idReparasi=?";
+            String query = "UPDATE reparasi SET " +
+                    "TglReparasi=?, JenisReparasi=?, " +
+                    "User_idUser=?, Kendaraan_idKendaraan=?  WHERE idReparasi=?";
             PreparedStatement ps=MySQLConnection.createConnection().prepareStatement(query);
             ps.setString(1,  object.getTglreparasi());
             ps.setString(2, object.getJenisreparasi());
             ps.setInt(3, object.getIdPemilik().getIdUser());
             ps.setInt(4, object.getIdKendaraan().getIdKendaraan());
             ps.setInt(5, object.getIdReparasi());
-
+            result=ps.executeUpdate();
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
